@@ -18,29 +18,36 @@ export const RenderContacts = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
-    const handleOpenModal = () => {
+  const handleOpenModal = () => {
     setIsOpen(true);
   };
 
-    const handleCloseModal = () => {
+  const handleCloseModal = () => {
     setIsOpen(false);
   };
 
   return (
     <>
-    <List>
-      {visibleContact.map(contact => (
-        <Item key={contact._id}>
-          {contact.name}: {contact.number}
-          <Button onClick={handleOpenModal}>edit</Button>
-          <Button onClick={() => dispatch(deleteContact(contact._id))}>
-            delete
-          </Button>
-        </Item>
-      ))}
+      <List>
+        {visibleContact.map(contact => (
+          <Item key={contact._id}>
+            {contact.name}: {contact.number}
+            <Button onClick={handleOpenModal}>edit</Button>
+            <Button onClick={() => dispatch(deleteContact(contact._id))}>
+              delete
+            </Button>
+          </Item>
+        ))}
       </List>
-      {isOpen&&<Modal onClick={handleCloseModal}>Hello</Modal>}
-</>
+      {isOpen && (
+        <Modal onClick={handleCloseModal}>
+          <form>
+            <input></input>
+            <input></input>
+          </form>
+        </Modal>
+      )}
+    </>
   );
 };
 

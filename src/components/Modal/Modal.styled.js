@@ -29,8 +29,7 @@ export const ModalBody = styled.div`
   border-radius: 20px;
   background-color: #ffffff;
   padding: 30px;
-  width: 100px;
-  height: 100px;
+
 `;
 
 export const CloseBtn = styled.button`
@@ -44,32 +43,3 @@ export const CloseBtn = styled.button`
   background-color: transparent;
 `;
 
-// .modal__close-btn {
-//   position: absolute;
-//   top: 8px;
-//   right: 8px;
-//   display: flex;
-//   width: 30px;
-//   height: 30px;
-//   justify-content: center;
-//   align-items: center;
-//   color: $pure-black;
-//   background-color: $prime-white;
-//   border: 1px solid $close-btn-border-color;
-//   border-radius: 50%;
-//   transition: color $time-cubic, outline-color $time-cubic;
-//   cursor: pointer;
-//   outline-color: transparent;
-
-//   &:hover,
-//   &:focus {
-//     color: $active-color;
-//     outline-color: $active-color;
-//   }
-// }
-
-// .modal__close-icon {
-//   width: 18px;
-//   height: 18px;
-//   fill: currentColor;
-// }
