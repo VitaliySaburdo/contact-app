@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/contact-app/static/css/main.d3a8c9a8.css",
-    "main.js": "/contact-app/static/js/main.bf62691a.js",
+    "main.js": "/contact-app/static/js/main.d482ac4e.js",
     "static/js/788.ce66cabd.chunk.js": "/contact-app/static/js/788.ce66cabd.chunk.js",
     "static/js/715.0ab28f57.chunk.js": "/contact-app/static/js/715.0ab28f57.chunk.js",
     "static/js/658.7ce7fbff.chunk.js": "/contact-app/static/js/658.7ce7fbff.chunk.js",
-    "static/js/302.458ed551.chunk.js": "/contact-app/static/js/302.458ed551.chunk.js",
+    "static/js/302.2d9b9838.chunk.js": "/contact-app/static/js/302.2d9b9838.chunk.js",
     "static/js/598.fd2f1e65.chunk.js": "/contact-app/static/js/598.fd2f1e65.chunk.js",
     "static/js/41.682fb6d4.chunk.js": "/contact-app/static/js/41.682fb6d4.chunk.js",
     "static/js/113.4976cfef.chunk.js": "/contact-app/static/js/113.4976cfef.chunk.js",
@@ -18,11 +18,11 @@
     "index.html": "/contact-app/index.html",
     "static/media/icons.svg": "/contact-app/static/media/icons.dafc7e9507cd83830f5a2b10b269e110.svg",
     "main.d3a8c9a8.css.map": "/contact-app/static/css/main.d3a8c9a8.css.map",
-    "main.bf62691a.js.map": "/contact-app/static/js/main.bf62691a.js.map",
+    "main.d482ac4e.js.map": "/contact-app/static/js/main.d482ac4e.js.map",
     "788.ce66cabd.chunk.js.map": "/contact-app/static/js/788.ce66cabd.chunk.js.map",
     "715.0ab28f57.chunk.js.map": "/contact-app/static/js/715.0ab28f57.chunk.js.map",
     "658.7ce7fbff.chunk.js.map": "/contact-app/static/js/658.7ce7fbff.chunk.js.map",
-    "302.458ed551.chunk.js.map": "/contact-app/static/js/302.458ed551.chunk.js.map",
+    "302.2d9b9838.chunk.js.map": "/contact-app/static/js/302.2d9b9838.chunk.js.map",
     "598.fd2f1e65.chunk.js.map": "/contact-app/static/js/598.fd2f1e65.chunk.js.map",
     "41.682fb6d4.chunk.js.map": "/contact-app/static/js/41.682fb6d4.chunk.js.map",
     "113.4976cfef.chunk.js.map": "/contact-app/static/js/113.4976cfef.chunk.js.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.d3a8c9a8.css",
-    "static/js/main.bf62691a.js"
+    "static/js/main.d482ac4e.js"
   ]
 }
