@@ -7,7 +7,10 @@ import { Loader } from 'components/Loader/Loader';
 import { addContact } from '../../redux/contacts/operations';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 export const ContactsMenu = () => {
+
+
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
@@ -15,12 +18,14 @@ export const ContactsMenu = () => {
 
 const handleAddContact = ({ name, number }) => {
   dispatch(addContact({ name, number }));
-};
+  };
+  
+ const buttonLabel = 'Add contact';
 
   return (
     <ContactContainer>
       <FormContainer>
-        <ContactForm onSubmit={handleAddContact}/>
+        <ContactForm onSubmit={handleAddContact} buttonLabel={buttonLabel}/>
         <Filter />
       </FormContainer>
       {isLoading && !error && <Loader/>}

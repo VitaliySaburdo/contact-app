@@ -7,7 +7,7 @@ import { Container, Title, Form, Label, Button } from './ContactForm.styled';
 
 import TextField from '@mui/material/TextField';
 
-export function ContactForm({initialData, onSubmit}) {
+export function ContactForm({buttonLabel, onSubmit}) {
 
   const contacts = useSelector(selectContacts);
 
@@ -79,7 +79,7 @@ export function ContactForm({initialData, onSubmit}) {
             }
           />
         </Label>
-        <Button type="submit">{initialData ? 'Update contact' : 'Add contact'}</Button>
+        <Button type="submit">{buttonLabel}</Button>
       </Form>
     </Container>
   );
