@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 export const ContactsMenu = () => {
-
-
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 

@@ -9,6 +9,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export const RenderContacts = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalContactId, setModalContactId] = useState(null);
 
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -19,13 +20,20 @@ export const RenderContacts = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (id) => {
     setIsOpen(true);
+    setModalContactId(id);
   };
 
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+
+  const handleUpdateContact = ({ name, number }) => {
+    console.log(name, number, modalContactId);
+  };
+
+  const buttonLabel = 'Update contact';
 
   return (
     <>
@@ -33,7 +41,13 @@ export const RenderContacts = () => {
         {visibleContact.map(contact => (
           <Item key={contact._id}>
             {contact.name}: {contact.number}
-            <Button onClick={handleOpenModal}>edit</Button>
+            <Button
+              onClick={() => {
+                handleOpenModal(contact._id);
+              }}
+            >
+              edit
+            </Button>
             <Button onClick={() => dispatch(deleteContact(contact._id))}>
               delete
             </Button>
@@ -42,7 +56,10 @@ export const RenderContacts = () => {
       </List>
       {isOpen && (
         <Modal onClick={handleCloseModal}>
-          <ContactForm/>
+          <ContactForm
+            onSubmit={handleUpdateContact}
+            buttonLabel={buttonLabel}
+          />
         </Modal>
       )}
     </>
