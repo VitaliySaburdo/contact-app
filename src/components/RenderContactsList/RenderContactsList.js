@@ -14,11 +14,14 @@ export const RenderContacts = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
+  const handleOnClick = () => {};
+
   return (
     <List>
       {visibleContact.map(contact => (
         <Item key={contact._id}>
           {contact.name}: {contact.number}
+          <Button onClick={handleOnClick}>edit</Button>
           <Button onClick={() => dispatch(deleteContact(contact._id))}>
             delete
           </Button>
