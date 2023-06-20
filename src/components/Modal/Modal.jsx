@@ -1,5 +1,4 @@
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
 import { Overlay, ModalBody } from './Modal.styled';
 import { useEffect } from 'react';
 
@@ -29,8 +28,4 @@ export const Modal = ({ onClick, children }) => {
     </Overlay>,
     modalRoot
   );
-};
-
-Modal.propTypes = {
-  onClick: PropTypes.func.isRequired,
 };
