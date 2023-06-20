@@ -5,6 +5,7 @@ import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
 import { Modal } from 'components/Modal/Modal';
 import { useState } from 'react';
+import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export const RenderContacts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,10 +42,7 @@ export const RenderContacts = () => {
       </List>
       {isOpen && (
         <Modal onClick={handleCloseModal}>
-          <form>
-            <input></input>
-            <input></input>
-          </form>
+          <ContactForm/>
         </Modal>
       )}
     </>
