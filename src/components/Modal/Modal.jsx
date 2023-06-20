@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom';
-import { Overlay, ModalBody } from './Modal.styled';
+import { Overlay, ModalBody, CloseBtn } from './Modal.styled';
 import { useEffect } from 'react';
+import icons from '../../images/icons.svg';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -22,9 +23,21 @@ export const Modal = ({ onClick, children }) => {
       onClick();
     }
   };
+
+  const handleCloseClick = () => {
+    onClick();
+  };
+
   return createPortal(
     <Overlay onClick={handleBackdropClick}>
-      <ModalBody>{children}</ModalBody>
+      <ModalBody>
+        <CloseBtn onClick={handleCloseClick}>
+          <svg width={17} height={17}>
+            <use href={icons + '#cross'}></use>
+          </svg>
+        </CloseBtn>
+        {children}
+      </ModalBody>
     </Overlay>,
     modalRoot
   );
