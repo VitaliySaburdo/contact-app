@@ -21,14 +21,14 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-weight: 700;
   font-weight: 700;
   font-size: 28px;
-      color: #455a64;
+  color: #455a64;
 `;
-  
+
 export const Input = styled.input`
   display: block;
   margin-left: auto;
@@ -39,7 +39,6 @@ export const Input = styled.input`
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
-  /* background-color: #7fcfff; */
 `;
 
 export const Button = styled.button`
@@ -52,7 +51,13 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   color: white;
-  background-color: green;
+  background-color: ${p => {
+    if (p.buttonLabel === 'Add contact') {
+      return 'green';
+    } else {
+      return 'orange';
+    }
+  }};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;

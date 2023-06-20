@@ -79,7 +79,7 @@ export function ContactForm({buttonLabel, onSubmit}) {
             }
           />
         </Label>
-        <Button type="submit">{buttonLabel}</Button>
+        <Button type="submit" buttonLabel={buttonLabel}>{buttonLabel}</Button>
       </Form>
     </Container>
   );
