@@ -7,8 +7,7 @@ import { Container, Title, Form, Label, Button } from './ContactForm.styled';
 
 import TextField from '@mui/material/TextField';
 
-export function ContactForm({buttonLabel, onSubmit}) {
-
+export function ContactForm({ buttonLabel, onSubmit, name, number }) {
   const contacts = useSelector(selectContacts);
 
   const validationSchema = yup.object({
@@ -22,8 +21,8 @@ export function ContactForm({buttonLabel, onSubmit}) {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      number: '',
+      name: name || '',
+      number: number || '',
     },
     validationSchema: validationSchema,
     onSubmit: ({ name, number }) => {
@@ -58,6 +57,7 @@ export function ContactForm({buttonLabel, onSubmit}) {
             onChange={formik.handleChange}
             error={formik.touched.name && Boolean(formik.errors.name)}
             helperText={formik.touched.name && formik.errors.name}
+            onClick={event => event.stopPropagation()}
           />
         </Label>
         <Label>
@@ -77,9 +77,12 @@ export function ContactForm({buttonLabel, onSubmit}) {
                 ? formik.errors.number
                 : ' '
             }
+            onClick={event => event.stopPropagation()}
           />
         </Label>
-        <Button type="submit" buttonLabel={buttonLabel}>{buttonLabel}</Button>
+        <Button type="submit" buttonLabel={buttonLabel}>
+          {buttonLabel}
+        </Button>
       </Form>
     </Container>
   );

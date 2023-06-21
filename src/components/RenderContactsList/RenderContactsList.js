@@ -11,6 +11,8 @@ import { putContact, fetchContacts } from '../../redux/contacts/operations';
 export const RenderContacts = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContactId, setModalContactId] = useState(null);
+  const [nameContact, setNameContact] = useState(null);
+  const [numberContact, setNumberContact] = useState(null);
 
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -21,9 +23,11 @@ export const RenderContacts = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
-  const handleOpenModal = id => {
+  const handleOpenModal = (id, name, number) => {
     setIsOpen(true);
     setModalContactId(id);
+    setNameContact(name);
+    setNumberContact(number);
   };
 
   const handleCloseModal = () => {
@@ -49,7 +53,7 @@ export const RenderContacts = () => {
             <ButtonWrapper>
               <Button
                 onClick={() => {
-                  handleOpenModal(contact._id);
+                  handleOpenModal(contact._id, contact.name, contact.number);
                 }}
                 edit
               >
@@ -70,6 +74,8 @@ export const RenderContacts = () => {
           <ContactForm
             onSubmit={handleUpdateContact}
             buttonLabel={buttonLabel}
+            name={nameContact}
+            number={numberContact}
           />
         </Modal>
       )}
