@@ -40,11 +40,13 @@ export const deleteContact = createAsyncThunk(
   }
 );
 
-// PATCH @ /contacts/:id
+// PUT @ /contacts/:id
 export const putContact = createAsyncThunk(
   'contacts/putContact',
-  async (contactId, contact, thunkAPI) => {
+  async ({contactId, contact}, thunkAPI) => {
     try {
+      console.log(`/contacts/${contactId}`, contact);
+      
       const response = await axios.put(`/contacts/${contactId}`, contact);
       return response.data;
     } catch (e) {

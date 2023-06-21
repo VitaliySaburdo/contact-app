@@ -39,7 +39,13 @@ const contactsSlice = createSlice({
         state.items.splice(index, 1);
       })
       .addCase(putContact.fulfilled, (state, action) => {
-        state.items = action.payload;
+        const index = state.items.findIndex(
+          item => item._id === action.payload.id
+        );
+
+        if (index !== -1) {
+          state.items[index] = action.payload;
+        }
       })
       .addCase(logOut.fulfilled, state => {
         state.items = [];

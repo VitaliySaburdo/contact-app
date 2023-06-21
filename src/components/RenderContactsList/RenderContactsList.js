@@ -6,6 +6,7 @@ import { deleteContact } from '../../redux/contacts/operations';
 import { Modal } from 'components/Modal/Modal';
 import { useState } from 'react';
 import { ContactForm } from 'components/ContactForm/ContactForm';
+import { putContact, fetchContacts } from '../../redux/contacts/operations';
 
 export const RenderContacts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +30,12 @@ export const RenderContacts = () => {
     setIsOpen(false);
   };
 
-  const handleUpdateContact = ({ name, number }) => {
-    console.log(name, number, modalContactId);
+  const handleUpdateContact = async ({ name, number }) => {
+    await dispatch(
+      putContact({ contactId: modalContactId, contact: { name, number } })
+    );
+    handleCloseModal();
+    dispatch(fetchContacts());
   };
 
   const buttonLabel = 'Update contact';
