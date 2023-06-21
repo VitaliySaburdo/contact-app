@@ -4,14 +4,14 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
-  patchContact,
+  putContact,
 } from './operations';
 
 const extraActions = [
   fetchContacts,
   addContact,
   deleteContact,
-  patchContact,
+  putContact,
   logOut,
 ];
 const getActions = type => extraActions.map(action => action[type]);
@@ -38,7 +38,7 @@ const contactsSlice = createSlice({
         );
         state.items.splice(index, 1);
       })
-      .addCase(patchContact.fulfilled, (state, action) => {
+      .addCase(putContact.fulfilled, (state, action) => {
         state.items = action.payload;
       })
       .addCase(logOut.fulfilled, state => {
