@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Item, Button, List } from './RenderContactList.styled';
+import { Item, Button, List, ButtonWrapper } from './RenderContactList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
@@ -20,7 +20,7 @@ export const RenderContacts = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
-  const handleOpenModal = (id) => {
+  const handleOpenModal = id => {
     setIsOpen(true);
     setModalContactId(id);
   };
@@ -41,16 +41,22 @@ export const RenderContacts = () => {
         {visibleContact.map(contact => (
           <Item key={contact._id}>
             {contact.name}: {contact.number}
-            <Button
-              onClick={() => {
-                handleOpenModal(contact._id);
-              }}
-            >
-              edit
-            </Button>
-            <Button onClick={() => dispatch(deleteContact(contact._id))}>
-              delete
-            </Button>
+            <ButtonWrapper>
+              <Button
+                onClick={() => {
+                  handleOpenModal(contact._id);
+                }}
+                edit
+              >
+                edit
+              </Button>
+              <Button
+                onClick={() => dispatch(deleteContact(contact._id))}
+                delete
+              >
+                delete
+              </Button>
+            </ButtonWrapper>
           </Item>
         ))}
       </List>

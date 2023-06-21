@@ -40,7 +40,8 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   color: white;
-  background-color: #de0000;
+  background-color: ${props =>
+    props.edit ? 'orange' : props.delete ? '#de0000' : 'initial'};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   border: none;
@@ -50,6 +51,12 @@ export const Button = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: red;
+    background-color: ${props =>
+      props.edit ? '#FF9966' : props.delete ? '#F44336' : 'initial'};
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  gap: 20px;
 `;

@@ -29,17 +29,15 @@ export const ModalBody = styled.div`
   border-radius: 20px;
   background-color: #ffffff;
   padding: 30px;
-
 `;
 
 export const CloseBtn = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   display: flex;
   border: none;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
 `;
-
