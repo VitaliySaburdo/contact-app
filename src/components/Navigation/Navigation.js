@@ -11,7 +11,7 @@ export const Navigation = () => {
         <span>
           <img src={phonebook} alt="phonebook" width={25} />
         </span>
-        <span>Contact Manager</span>
+        <span>Contact app</span>
       </NavbarLink>
       {isLoggedIn && <NavbarLink to="/contacts">Contacts</NavbarLink>}
     </NavBar>
