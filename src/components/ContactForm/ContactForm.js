@@ -1,5 +1,3 @@
-import { useSelector } from 'react-redux';
-import { selectContacts } from 'redux/contacts/selectors';
 import PropTypes from 'prop-types';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -8,8 +6,6 @@ import { Container, Title, Form, Label, Button } from './ContactForm.styled';
 import TextField from '@mui/material/TextField';
 
 export function ContactForm({ buttonLabel, onSubmit, name, number }) {
-  const contacts = useSelector(selectContacts);
-
   const validationSchema = yup.object({
     name: yup.string('Enter your Name').required('Name is required'),
     number: yup
@@ -26,19 +22,10 @@ export function ContactForm({ buttonLabel, onSubmit, name, number }) {
     },
     validationSchema: validationSchema,
     onSubmit: ({ name, number }) => {
-      if (isNumberInContact) {
-        alert(`${name} is already in contacts`);
-      } else {
-        onSubmit({ name, number });
-        formik.resetForm();
-      }
+      onSubmit({ name, number });
+      formik.resetForm();
     },
   });
-  const isNumberInContact = contacts.find(
-    contact =>
-      contact.number.toLocaleLowerCase() ===
-      formik.values.number.toLocaleLowerCase()
-  );
 
   return (
     <Container>
