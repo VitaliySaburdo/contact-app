@@ -1,8 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, lazy } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { selectIsRefreshing } from '../redux/auth/selectors';
 import { refreshUser } from '../redux/auth/operations';
 import { PrivateRoute } from '../helpers/PrivateRoute';
 import { RestrictedRoute } from '../helpers/RestrictedRoute';
@@ -16,15 +15,12 @@ const Contacts = lazy(() => import('../pages/Contacts'));
 
 export function App() {
   const dispatch = useDispatch();
-  const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
+  return (
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Layout />}>
