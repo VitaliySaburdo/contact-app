@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Header = styled.header`
-  height: 70px;
+export const HeaderWrapper = styled.header`
+  background-color: ${props => props.theme.colors.blue};
+`;
+
+export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${props => props.theme.colors.blue};
 `;
 
 export const NavbarLink = styled(NavLink)`

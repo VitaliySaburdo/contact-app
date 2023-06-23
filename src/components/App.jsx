@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { refreshUser } from '../redux/auth/operations';
 import { PrivateRoute } from '../helpers/PrivateRoute';
 import { RestrictedRoute } from '../helpers/RestrictedRoute';
-import { Layout } from './SharedLayout/SharedLayout';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 import { theme } from '../theme/theme';
 
 const Home = lazy(() => import('../pages/Home'));
@@ -23,7 +23,7 @@ export function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route
             path="/register"

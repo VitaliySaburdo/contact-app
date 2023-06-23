@@ -1,22 +1,27 @@
 import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
-import { Header, NavbarLink } from './Header.styled';
+import { HeaderWrapper, NavWrapper, NavbarLink } from './Header.styled';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';
+import { Container } from 'components/Container/Container';
 
-export const AppBar = () => {
+export const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <Header>
-      <Navigation />
-      {isLoggedIn ? (
-        <NavbarLink to="/contacts">
-          <UserMenu />
-        </NavbarLink>
-      ) : (
-        <AuthNav />
-      )}
-    </Header>
+    <HeaderWrapper>
+      <Container>
+        <NavWrapper>
+          <Navigation />
+          {isLoggedIn ? (
+            <NavbarLink to="/contacts">
+              <UserMenu />
+            </NavbarLink>
+          ) : (
+            <AuthNav />
+          )}
+        </NavWrapper>
+      </Container>
+    </HeaderWrapper>
   );
 };
