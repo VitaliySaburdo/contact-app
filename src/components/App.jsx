@@ -5,7 +5,7 @@ import { selectIsRefreshing } from '../redux/auth/selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { refreshUser } from '../redux/auth/operations';
 import { PrivateRoute } from '../helpers/PrivateRoute';
-import {RestrictedRoute} from '../helpers/RestrictedRoute'
+import { RestrictedRoute } from '../helpers/RestrictedRoute';
 
 const Home = lazy(() => import('../pages/Home'));
 const Register = lazy(() => import('../pages/Register'));
@@ -26,16 +26,26 @@ export function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Register />} />} />
-        <Route path="/login" element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<Register />} />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<Login />} />
+          }
+        />
         <Route
           path="/contacts"
           element={
             <PrivateRoute redirectTo="/login" component={<Contacts />} />
           }
         />
+        <Route path="*" element={<p>Page not found</p>} />
       </Route>
     </Routes>
   );
 }
-
