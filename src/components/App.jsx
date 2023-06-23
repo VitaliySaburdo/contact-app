@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, lazy } from 'react';
 import { Layout } from './Layout/Layout';
 import { selectIsRefreshing } from '../redux/auth/selectors';
@@ -44,7 +44,7 @@ export function App() {
             <PrivateRoute redirectTo="/login" component={<Contacts />} />
           }
         />
-        <Route path="*" element={<p>Page not found</p>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   );
