@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/contact-app/static/css/main.d3a8c9a8.css",
-    "main.js": "/contact-app/static/js/main.b2dbeff1.js",
+    "main.js": "/contact-app/static/js/main.4b81d999.js",
     "static/js/788.ce66cabd.chunk.js": "/contact-app/static/js/788.ce66cabd.chunk.js",
     "static/js/715.0ab28f57.chunk.js": "/contact-app/static/js/715.0ab28f57.chunk.js",
     "static/js/658.7ce7fbff.chunk.js": "/contact-app/static/js/658.7ce7fbff.chunk.js",
@@ -18,7 +18,7 @@
     "index.html": "/contact-app/index.html",
     "static/media/icons.svg": "/contact-app/static/media/icons.dafc7e9507cd83830f5a2b10b269e110.svg",
     "main.d3a8c9a8.css.map": "/contact-app/static/css/main.d3a8c9a8.css.map",
-    "main.b2dbeff1.js.map": "/contact-app/static/js/main.b2dbeff1.js.map",
+    "main.4b81d999.js.map": "/contact-app/static/js/main.4b81d999.js.map",
     "788.ce66cabd.chunk.js.map": "/contact-app/static/js/788.ce66cabd.chunk.js.map",
     "715.0ab28f57.chunk.js.map": "/contact-app/static/js/715.0ab28f57.chunk.js.map",
     "658.7ce7fbff.chunk.js.map": "/contact-app/static/js/658.7ce7fbff.chunk.js.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.d3a8c9a8.css",
-    "static/js/main.b2dbeff1.js"
+    "static/js/main.4b81d999.js"
   ]
 }
