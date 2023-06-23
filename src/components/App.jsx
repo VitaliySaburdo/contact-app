@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { refreshUser } from '../redux/auth/operations';
 import { PrivateRoute } from '../helpers/PrivateRoute';
 import { RestrictedRoute } from '../helpers/RestrictedRoute';
-import { Layout } from './Layout/Layout';
+import { Layout } from './SharedLayout/SharedLayout';
 import { theme } from '../theme/theme';
 
 const Home = lazy(() => import('../pages/Home'));
