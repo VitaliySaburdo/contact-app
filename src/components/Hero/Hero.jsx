@@ -1,15 +1,20 @@
-import { Container, Title, Button, HeroLink } from './Hero.styled';
+import { HeroWrapper, Title, Button, HeroLink } from './Hero.styled';
+import { Container } from '../Container/Container';
+import { Section } from '../Section/Section';
 
 export const Hero = () => {
   return (
     <>
-      <Container>
-        <Title>Welcome to contact service</Title>
-        <HeroLink to="/register">
-          <Button type="button">Try our service</Button>
-        </HeroLink>
-      </Container>
-      {/* <Link/> */}
+      <Section>
+        <Container>
+          <HeroWrapper>
+            <Title>Welcome to contact service</Title>
+            <HeroLink to="/register">
+              <Button type="button">Try our service</Button>
+            </HeroLink>
+          </HeroWrapper>
+        </Container>
+      </Section>
     </>
   );
 };

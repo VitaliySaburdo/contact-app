@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const HeroLink = styled(Link)`
   text-decoration: none;
 `;
-export const Container = styled.div`
+export const HeroWrapper = styled.div`
   height: 700px;
   background-image: linear-gradient(
       to right,
