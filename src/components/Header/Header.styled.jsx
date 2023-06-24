@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.colors.blue};
+  background-color: ${props => props.theme.colors.light};
 `;
 
 export const NavWrapper = styled.div`
