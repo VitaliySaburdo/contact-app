@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
-  background-color: #471ca9;
+  background-color: ${props => props.theme.colors.blue};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 `;
 
