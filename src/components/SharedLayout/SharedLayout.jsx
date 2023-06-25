@@ -9,11 +9,13 @@ export const SharedLayout = () => {
   return (
     <>
       <Header />
-      <Suspense fallback={null}>
-        <StyledMain>
+      <StyledMain>
+        <Suspense fallback={null}>
+
           <Outlet />
-        </StyledMain>
-      </Suspense>
+
+        </Suspense>
+      </StyledMain>
       <Footer />
     </>
   );
