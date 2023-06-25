@@ -3,7 +3,7 @@ export const theme = Object.freeze({
     main: `'Manrope', sans-serif`,
     second: `'Inter', sans-serif`,
   },
-  fontSizes: [12, 14, 16, 18, 20, 24, 28, 32, 44, 48, 60, 72, 100, 10, 36],
+  fontSizes: [12, 14, 16],
   fontWeights: {
     regular: 400,
     medium: 500,
