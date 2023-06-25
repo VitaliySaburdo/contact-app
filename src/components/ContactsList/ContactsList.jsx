@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Item, Button, List, ButtonWrapper } from './RenderContactList.styled';
+import { Item, Button, List, ButtonWrapper } from './ContactsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { putContact, fetchContacts } from '../../redux/contacts/operations';
 
-export const RenderContacts = () => {
+export const ContactsList = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContactId, setModalContactId] = useState(null);
   const [nameContact, setNameContact] = useState(null);
@@ -83,7 +83,7 @@ export const RenderContacts = () => {
   );
 };
 
-RenderContacts.prototype = {
+ContactsList.prototype = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

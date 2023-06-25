@@ -1,15 +1,18 @@
-import { ContactForm } from '../ContactForm/ContactForm';
-import { Filter } from '../Filter/Filter';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   selectError,
   selectIsLoading,
   selectContacts,
 } from 'redux/contacts/selectors';
-import { RenderContacts } from '../RenderContactsList/RenderContactsList';
-import { ContactContainer, FormContainer } from './ContactsMenu.styled';
-import { Loader } from 'components/Loader/Loader';
 import { addContact } from '../../redux/contacts/operations';
-import { useDispatch, useSelector } from 'react-redux';
+import { Loader } from 'components/Loader/Loader';
+import { ContactForm } from '../ContactForm/ContactForm';
+import { Filter } from '../Filter/Filter';
+import { ContactsList } from '../ContactsList/ContactsList';
+import { ContactContainer, FormContainer } from './ContactsMenu.styled';
+
+
+
 
 export const ContactsMenu = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -40,7 +43,7 @@ export const ContactsMenu = () => {
         <Filter />
       </FormContainer>
       {isLoading && !error && <Loader />}
-      <RenderContacts />
+      <ContactsList />
     </ContactContainer>
   );
 };
