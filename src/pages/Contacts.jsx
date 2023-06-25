@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import { ContactsMenu } from 'components/Contacts/ContactsMenu';
+import { ContactsMenu } from 'components/ContactsMenu/ContactsMenu';
 import { Container } from 'components/Container/Container';
 import { Section } from 'components/Section/Section';
 
