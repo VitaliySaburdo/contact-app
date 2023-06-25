@@ -11,12 +11,18 @@ export const theme = Object.freeze({
     bold: 700,
   },
   colors: {
+    // My styles
+    primaryColor: '#1976d2',
+    scondaryColour: '#455a64',
+    clearWhite: '#FFFFFF',
+    btnBorderColor: 'rgba(30, 30, 30, 0.2)',
+  // Prev styles
     dark: '#111111',
     orange: '#FFC107',
     white: '#FDF7F2',
     whity: '#FEF9F9',
     light: '#f0f0f0',
-    clearWhite: '#FFFFFF',
+    
     blueGradient: 'linear-gradient(290.46deg, #419EF1 0%, #9BD0FF 107.89%)',
     blue: '#0f70da',
     blueDark: '#419EF1',

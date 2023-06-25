@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterStyled = styled.footer`
-  background-color: ${props => props.theme.colors.light};
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-`;
+export const FooterStyled = styled.footer``;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -14,20 +11,20 @@ export const Wrapper = styled.div`
 `;
 
 export const Link = styled.a`
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
 
-  color: #a499bd;
+  color: ${p => p.theme.colors.primaryColor};
   text-decoration: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    color: #d13bd1;
+    color: ${p => p.theme.colors.scondaryColour};
   }
 `;
 
@@ -40,14 +37,17 @@ export const SocialLink = styled.a`
   border-radius: 50%;
   border: 0;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid;
+  border-color: ${p=>p.theme.colors.btnBorderColor};
+  fill: ${p=>p.theme.colors.primaryColor};
 
   transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   :focus {
-    background-color: #d13bd1;
+    background-color: ${p => p.theme.colors.primaryColor};
+    fill: ${p=>p.theme.colors.clearWhite};
   }
 `;
 
@@ -59,5 +59,5 @@ export const List = styled.ul`
 `;
 
 export const StyledSVG = styled.svg`
-  fill: #a499bd;
+  fill: inherit;
 `;
