@@ -29,6 +29,19 @@ export const ContactsList = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
+  const sortedContacts = visibleContact.sort((a, b) => {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+
   const handleOpenModal = (id, name, number) => {
     setIsOpen(true);
     setModalContactId(id);
@@ -54,7 +67,7 @@ export const ContactsList = () => {
     <>
       <ListWrapper>
         <List>
-          {visibleContact.map(contact => (
+          {sortedContacts.map(contact => (
             <Item key={contact._id}>
               {contact.name}: {contact.number}
               <ButtonWrapper>
