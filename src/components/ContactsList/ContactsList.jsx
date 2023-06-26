@@ -5,6 +5,7 @@ import {
   List,
   ButtonWrapper,
   ListWrapper,
+  Text,
 } from './ContactsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
@@ -67,27 +68,35 @@ export const ContactsList = () => {
     <>
       <ListWrapper>
         <List>
-          {sortedContacts.map(contact => (
-            <Item key={contact._id}>
-              {contact.name}: {contact.number}
-              <ButtonWrapper>
-                <Button
-                  onClick={() => {
-                    handleOpenModal(contact._id, contact.name, contact.number);
-                  }}
-                  edit
-                >
-                  edit
-                </Button>
-                <Button
-                  onClick={() => dispatch(deleteContact(contact._id))}
-                  delete
-                >
-                  delete
-                </Button>
-              </ButtonWrapper>
-            </Item>
-          ))}
+          {sortedContacts.length === 0 ? (
+            <Text>There is no contacts in your list</Text>
+          ) : (
+            sortedContacts.map(contact => (
+              <Item key={contact._id}>
+                {contact.name}: {contact.number}
+                <ButtonWrapper>
+                  <Button
+                    onClick={() => {
+                      handleOpenModal(
+                        contact._id,
+                        contact.name,
+                        contact.number
+                      );
+                    }}
+                    edit
+                  >
+                    edit
+                  </Button>
+                  <Button
+                    onClick={() => dispatch(deleteContact(contact._id))}
+                    delete
+                  >
+                    delete
+                  </Button>
+                </ButtonWrapper>
+              </Item>
+            ))
+          )}
         </List>
         {isOpen && (
           <Modal onClick={handleCloseModal}>

@@ -19,21 +19,28 @@ export const UserName = styled.p`
 `;
 
 export const Button = styled.button`
-  font-family: 'Poppins';
+  font-family: 'Roboto';
   font-size: 16px;
-  text-align: center;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
-  border: none;
   gap: 10px;
-  width: 97px;
-  height: 45px;
-  background: #3792de;
-  border-radius: 30px;
-  color: #ffffff;
+  width: 80px;
+  height: 35px;
+  border: 1px solid;
+  border-color: ${props => props.theme.colors.btnBorderColor};
+  border-radius: 5px;
+  color: ${props => props.theme.colors.primaryColor};
+  background-color: transparent;
   cursor: pointer;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  :hover {
+    color: ${props => props.theme.colors.clearWhite};
+    background: ${props => props.theme.colors.primaryColor};
+  }
 `;

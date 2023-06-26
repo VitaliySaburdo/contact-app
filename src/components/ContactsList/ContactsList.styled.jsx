@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ListWrapper = styled.div`
   overflow-y: scroll;
   width: 540px;
-
   height: 500px;
   padding: 0;
   border: 1px solid;
@@ -33,6 +32,16 @@ export const ListWrapper = styled.div`
 export const List = styled.ul`
   display: block;
   padding: 10px;
+`;
+
+export const Text = styled.p`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
 `;
 
 export const Item = styled.li`

@@ -9,7 +9,7 @@ export const ContactContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  height: 420px;
+  height: 460px;
   padding: 20px;
   border: 1px solid;
   border-radius: 8px;
