@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 650px;
 `;
 
 export const FormContainer = styled.div`
-  margin-top: 60px;
   height: 420px;
   padding: 20px;
   border: 1px solid;

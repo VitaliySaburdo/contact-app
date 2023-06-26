@@ -4,10 +4,7 @@ export const ListWrapper = styled.div`
   overflow-y: scroll;
   width: 540px;
 
-  max-height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
+  height: 500px;
   padding: 0;
   border: 1px solid;
   border-color: ${props => props.theme.colors.btnBorderColor};
