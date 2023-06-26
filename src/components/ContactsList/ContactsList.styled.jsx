@@ -1,12 +1,41 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
-  display: block;
+export const ListWrapper = styled.div`
+  overflow-y: scroll;
   width: 540px;
+
+  max-height: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
   padding: 0;
+  border: 1px solid;
+  border-color: ${props => props.theme.colors.btnBorderColor};
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.07);
+
+  /* Styling the scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+`;
+
+export const List = styled.ul`
+  display: block;
+  padding: 10px;
 `;
 
 export const Item = styled.li`

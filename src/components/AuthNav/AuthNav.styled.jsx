@@ -19,19 +19,18 @@ export const StyledNavLink = styled(NavLink)`
   width: 80px;
   height: 35px;
   border: 1px solid;
-  border-color: ${props=>props.theme.colors.btnBorderColor};
-  color: ${props=>props.theme.colors.primaryColor};
+  border-color: ${props => props.theme.colors.btnBorderColor};
   border-radius: 5px;
+  color: ${props => props.theme.colors.primaryColor};
+
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    color: ${props=>props.theme.colors.clearWhite};
-    background: ${props=>props.theme.colors.primaryColor};
+    color: ${props => props.theme.colors.clearWhite};
+    background: ${props => props.theme.colors.primaryColor};
   }
-   &.active {
-    color: ${props=>props.theme.colors.clearWhite};
-    background: ${props=>props.theme.colors.primaryColor};
+  &.active {
+    color: ${props => props.theme.colors.clearWhite};
+    background: ${props => props.theme.colors.primaryColor};
   }
 `;
-
-

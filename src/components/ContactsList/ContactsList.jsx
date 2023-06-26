@@ -1,5 +1,11 @@
 import PropTypes from 'prop-types';
-import { Item, Button, List, ButtonWrapper } from './ContactsList.styled';
+import {
+  Item,
+  Button,
+  List,
+  ButtonWrapper,
+  ListWrapper,
+} from './ContactsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
@@ -46,39 +52,41 @@ export const ContactsList = () => {
 
   return (
     <>
-      <List>
-        {visibleContact.map(contact => (
-          <Item key={contact._id}>
-            {contact.name}: {contact.number}
-            <ButtonWrapper>
-              <Button
-                onClick={() => {
-                  handleOpenModal(contact._id, contact.name, contact.number);
-                }}
-                edit
-              >
-                edit
-              </Button>
-              <Button
-                onClick={() => dispatch(deleteContact(contact._id))}
-                delete
-              >
-                delete
-              </Button>
-            </ButtonWrapper>
-          </Item>
-        ))}
-      </List>
-      {isOpen && (
-        <Modal onClick={handleCloseModal}>
-          <ContactForm
-            onSubmit={handleUpdateContact}
-            buttonLabel={buttonLabel}
-            name={nameContact}
-            number={numberContact}
-          />
-        </Modal>
-      )}
+      <ListWrapper>
+        <List>
+          {visibleContact.map(contact => (
+            <Item key={contact._id}>
+              {contact.name}: {contact.number}
+              <ButtonWrapper>
+                <Button
+                  onClick={() => {
+                    handleOpenModal(contact._id, contact.name, contact.number);
+                  }}
+                  edit
+                >
+                  edit
+                </Button>
+                <Button
+                  onClick={() => dispatch(deleteContact(contact._id))}
+                  delete
+                >
+                  delete
+                </Button>
+              </ButtonWrapper>
+            </Item>
+          ))}
+        </List>
+        {isOpen && (
+          <Modal onClick={handleCloseModal}>
+            <ContactForm
+              onSubmit={handleUpdateContact}
+              buttonLabel={buttonLabel}
+              name={nameContact}
+              number={numberContact}
+            />
+          </Modal>
+        )}
+      </ListWrapper>
     </>
   );
 };
