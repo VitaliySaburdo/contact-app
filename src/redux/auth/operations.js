@@ -13,6 +13,20 @@ const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
+// Axios request interceptor
+axios.interceptors.request.use(
+  config => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  error => {
+    return Promise.reject(error);
+  }
+);
+
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
@@ -41,6 +55,7 @@ export const logIn = createAsyncThunk(
     }
   }
 );
+
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
