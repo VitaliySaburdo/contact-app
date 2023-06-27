@@ -21,12 +21,11 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${p => p.theme.fonts.second};
   font-style: italic;
-  font-weight: 700;
-  font-weight: 700;
-  font-size: 28px;
-  color: #455a64;
+  font-weight: ${p => p.theme.fontWeights.bold};
+  font-size: ${props => props.theme.fontSizes.menuTitleSize};
+  color: ${p => p.theme.colors.secondaryColor};
 `;
 
 export const Input = styled.input`
@@ -51,13 +50,10 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   color: white;
-  background-color: ${p => {
-    if (p.buttonLabel === 'Add contact') {
-      return 'green';
-    } else {
-      return 'orange';
-    }
-  }};
+  background-color: ${p =>
+    p.buttonLabel === 'Add contact'
+      ? p.theme.colors.btnSuccessColor
+      : p.theme.colors.btnEditColor};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -67,12 +63,9 @@ export const Button = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: ${p => {
-      if (p.buttonLabel === 'Add contact') {
-        return '#13ba00';
-      } else {
-        return '#FF9966';
-      }
-    }};
+    background-color: ${p =>
+      p.buttonLabel === 'Add contact'
+        ? p.theme.colors.btnSuccessHoverColor
+        : p.theme.colors.btnEditHoverColor};
   }
 `;

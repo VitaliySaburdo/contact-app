@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const StyledNavLink = styled(NavLink)`
   font-family: ${props => props.theme.fonts.main};
-  font-size: ${props => props.theme.fontSizes[3]};
+  font-size: ${props => props.theme.fontSizes.mainFontSize};
   text-decoration: none;
   display: flex;
   flex-direction: row;
