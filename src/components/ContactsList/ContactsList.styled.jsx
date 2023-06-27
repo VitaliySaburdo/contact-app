@@ -16,36 +16,36 @@ export const ListWrapper = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: ${p => p.theme.colors.ScrollBarColor};
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: ${p => p.theme.colors.ScrollBarHoverColor};
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
+    background-color: transparent;
   }
 `;
 
 export const List = styled.ul`
   display: block;
-  padding: 10px;
+  padding: 10px 10px 10px 18px;
 `;
 
 export const Text = styled.p`
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: ${p => p.theme.fonts.second};
   font-style: italic;
   font-weight: 700;
   font-size: 16px;
 `;
 
 export const Item = styled.li`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${p => p.theme.fonts.second};
   font-style: italic;
   font-weight: 700;
   font-size: 16px;
