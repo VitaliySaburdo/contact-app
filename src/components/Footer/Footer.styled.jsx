@@ -24,7 +24,7 @@ export const Link = styled.a`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    color: ${p => p.theme.colors.scondaryColour};
+    color: ${p => p.theme.colors.secondaryColor};
   }
 `;
 
@@ -38,8 +38,8 @@ export const SocialLink = styled.a`
   border: 0;
   gap: 10px;
   border: 1px solid;
-  border-color: ${p=>p.theme.colors.btnBorderColor};
-  fill: ${p=>p.theme.colors.primaryColor};
+  border-color: ${p => p.theme.colors.btnBorderColor};
+  fill: ${p => p.theme.colors.primaryColor};
 
   transition-property: background-color, fill;
   transition-duration: 250ms;
@@ -47,7 +47,7 @@ export const SocialLink = styled.a`
   &:hover,
   :focus {
     background-color: ${p => p.theme.colors.primaryColor};
-    fill: ${p=>p.theme.colors.clearWhite};
+    fill: ${p => p.theme.colors.clearWhite};
   }
 `;
 
