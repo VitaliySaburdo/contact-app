@@ -30,17 +30,10 @@ export const ContactsList = () => {
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 
-  const sortedContacts = visibleContact.sort((a, b) => {
+  const sortedContacts = [...visibleContact].sort((a, b) => {
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
-
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    return 0;
+    return nameA.localeCompare(nameB);
   });
 
   const handleOpenModal = (id, name, number) => {

@@ -27,6 +27,9 @@ export const theme = Object.freeze({
     btnDeleteColor: '#de0000',
     btnDeleteHoverColor: '#F44336',
 
+    // Border color
+    mainBorderColor: 'rgba(0, 0, 0, 0.1)',
+
     // Scroll bar style
     ScrollBarColor: '#888',
     ScrollBarHoverColor: '#888',

@@ -7,8 +7,8 @@ export const Container = styled.div`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  font-family: ${props => props.theme.fonts.main};
-  font-size: ${props => props.theme.fontSizes.mainFontSize};
+  font-family: ${p => p.theme.fonts.main};
+  font-size: ${p => p.theme.fontSizes.mainFontSize};
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -19,18 +19,18 @@ export const StyledNavLink = styled(NavLink)`
   width: 80px;
   height: 35px;
   border: 1px solid;
-  border-color: ${props => props.theme.colors.btnBorderColor};
+  border-color: ${p => p.theme.colors.btnBorderColor};
   border-radius: 5px;
-  color: ${props => props.theme.colors.primaryColor};
+  color: ${p => p.theme.colors.primaryColor};
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    color: ${props => props.theme.colors.clearWhite};
-    background: ${props => props.theme.colors.primaryColor};
+    color: ${p => p.theme.colors.clearWhite};
+    background: ${p => p.theme.colors.primaryColor};
   }
   &.active {
-    color: ${props => props.theme.colors.clearWhite};
-    background: ${props => props.theme.colors.primaryColor};
+    color: ${p => p.theme.colors.clearWhite};
+    background: ${p => p.theme.colors.primaryColor};
   }
 `;

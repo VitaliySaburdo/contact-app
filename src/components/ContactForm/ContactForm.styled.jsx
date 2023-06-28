@@ -34,7 +34,7 @@ export const Input = styled.input`
   margin-right: auto;
   padding: 10px;
   width: 95%;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid ${p => p.theme.colors.mainBorderColor};
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
@@ -49,12 +49,12 @@ export const Button = styled.button`
   height: 40px;
   cursor: pointer;
   font-size: 16px;
-  color: white;
+  color: ${p => p.theme.colors.clearWhite};
   background-color: ${p =>
     p.buttonLabel === 'Add contact'
       ? p.theme.colors.btnSuccessColor
       : p.theme.colors.btnEditColor};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: ${p => p.theme.shadows.mainShadow};
   border-radius: 4px;
   border: none;
   outline: none;

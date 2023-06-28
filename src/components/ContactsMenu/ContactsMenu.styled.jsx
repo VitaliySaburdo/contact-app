@@ -13,6 +13,6 @@ export const FormContainer = styled.div`
   padding: 20px;
   border: 1px solid;
   border-radius: 8px;
-  border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.07);
+  border-color: ${p => p.theme.colors.mainBorderColor};
+  box-shadow: ${p => p.theme.shadows.secondShadow};
 `;
