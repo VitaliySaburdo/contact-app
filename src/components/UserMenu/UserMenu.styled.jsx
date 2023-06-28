@@ -15,11 +15,11 @@ export const Box = styled.div`
 export const UserName = styled.p`
   font-weight: 500;
   font-size: 12px;
-  color: #455a64;
+  color: ${p => p.theme.colors.secondaryColor};
 `;
 
 export const Button = styled.button`
-  font-family: 'Roboto';
+  font-family: ${p => p.theme.fonts.main};
   font-size: 16px;
   text-decoration: none;
   display: flex;
@@ -31,16 +31,16 @@ export const Button = styled.button`
   width: 80px;
   height: 35px;
   border: 1px solid;
-  border-color: ${props => props.theme.colors.btnBorderColor};
+  border-color: ${p => p.theme.colors.btnBorderColor};
   border-radius: 5px;
-  color: ${props => props.theme.colors.primaryColor};
+  color: ${p => p.theme.colors.primaryColor};
   background-color: transparent;
   cursor: pointer;
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    color: ${props => props.theme.colors.clearWhite};
-    background: ${props => props.theme.colors.primaryColor};
+    color: ${p => p.theme.colors.clearWhite};
+    background: ${p => p.theme.colors.primaryColor};
   }
 `;

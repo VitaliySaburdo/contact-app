@@ -27,7 +27,7 @@ export const ModalBody = styled.div`
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: ${p => p.theme.colors.clearWhite};
   padding: 30px;
 `;
 

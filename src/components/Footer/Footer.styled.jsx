@@ -15,7 +15,7 @@ export const Link = styled.a`
   text-align: center;
   font-style: normal;
   font-weight: 500;
-  font-size: ${p => p.theme.fontSizes.mainFontSize};
+  font-size: ${p => p.theme.fontSizes.linkFontSize};
   line-height: 18px;
 
   color: ${p => p.theme.colors.primaryColor};

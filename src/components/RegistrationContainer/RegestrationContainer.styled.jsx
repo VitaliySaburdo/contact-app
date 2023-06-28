@@ -25,7 +25,7 @@ export const Title = styled.div`
   font-weight: 400px;
   font-size: 22px;
   text-align: center;
-  color: #ffffff;
+  color: ${p => p.theme.colors.clearWhite};
   z-index: 100;
 `;
 

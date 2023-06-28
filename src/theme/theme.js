@@ -5,6 +5,7 @@ export const theme = Object.freeze({
   },
   fontSizes: {
     mainFontSize: '16px',
+    linkFontSize: '12px',
     menuTitleSize: '28px',
   },
   fontWeights: {

@@ -11,12 +11,12 @@ export const NavbarLink = styled(NavLink)`
   margin-top: 25px;
   margin-bottom: 25px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: ${p => p.theme.fonts.second};
   font-style: italic;
   font-weight: 700;
   font-size: 25px;
   display: flex;
-  color: #455a64;
+  color: ${p => p.theme.colors.secondaryColor};
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   :hover {

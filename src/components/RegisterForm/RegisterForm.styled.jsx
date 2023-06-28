@@ -15,7 +15,7 @@ export const Box = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family: 'Poppins';
+  font-family: ${p => p.theme.fonts.second};
   font-weight: 600px;
   font-size: 19px;
   text-align: center;
@@ -36,7 +36,7 @@ export const Input = styled(Field)`
 
 export const Text = styled.p`
   margin-top: 15px;
-  font-family: 'Poppins';
+  font-family: ${p => p.theme.fonts.second};
   font-weight: 400px;
   font-size: 16px;
   text-align: center;
