@@ -12,11 +12,11 @@ export const Title = styled.div`
   width: 350px;
   left: 20%;
   top: 8%;
-  font-family: 'Poppins';
-  font-weight: 400px;
+  font-family: ${p => p.theme.fonts.second};
+  font-weight: ${p => p.theme.fontWeights.regular};
   font-size: 16px;
   text-align: center;
-  color: #ffffff;
+  color: ${p => p.theme.colors.clearWhite};
 `;
 
 export const Circus = styled.div`

@@ -21,18 +21,18 @@ export const HeroWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: 'Poppins';
+  font-family: ${p => p.theme.fonts.second};
   font-weight: 400px;
   font-size: 35px;
   text-align: center;
-  color: #ffffff;
+  color: ${p => p.theme.colors.clearWhite};
   padding-top: 180px;
   margin-bottom: 60px;
 `;
 
 export const Button = styled.button`
-  font-family: 'Poppins';
-  font-weight: 400px;
+  font-family: ${p => p.theme.fonts.second};
+  font-weight: ${p => p.theme.fontWeights.regular};
   font-size: 35px;
   text-align: center;
   display: block;
@@ -44,7 +44,7 @@ export const Button = styled.button`
   font-size: 16px;
   color: white;
   background-color: #3792de;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: ${p => p.theme.shadows.mainShadow};
   border-radius: 4px;
   border: none;
   outline: none;
@@ -53,6 +53,6 @@ export const Button = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: #3ca0f3;
+    background-color: ${p => p.theme.colors.primaryColor};
   }
 `;

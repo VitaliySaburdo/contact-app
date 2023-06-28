@@ -1,9 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.header`
-
-`;
+export const HeaderWrapper = styled.header``;
 
 export const NavWrapper = styled.div`
   display: flex;
@@ -18,7 +16,7 @@ export const NavbarLink = styled(NavLink)`
   font-weight: 700;
   font-size: 25px;
   display: flex;
-  color: #455a64;
+  color: ${p => p.theme.colors.secondaryColor};
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   :hover {

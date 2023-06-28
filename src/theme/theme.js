@@ -33,8 +33,6 @@ export const theme = Object.freeze({
     // Scroll bar style
     ScrollBarColor: '#888',
     ScrollBarHoverColor: '#888',
-    transparent: 'transparent',
-    currentColor: 'currentColor',
   },
   shadows: {
     mainShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)',

@@ -12,7 +12,7 @@ export const Input = styled.input`
   margin-right: auto;
   padding: 10px;
   width: 420px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid ${p => p.theme.colors.mainBorderColor};
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;

@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Link = styled.a`
-  font-family: 'Roboto';
+  font-family: ${p => p.theme.fonts.main};
   text-align: center;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: ${p => p.theme.fontSizes.mainFontSize};
   line-height: 18px;
 
   color: ${p => p.theme.colors.primaryColor};
