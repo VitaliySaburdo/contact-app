@@ -35,7 +35,7 @@ export const theme = Object.freeze({
   },
   shadows: {
     mainShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)',
-    secondShadow: '7px 13px 14px rgba(116, 177, 232, 0.24)',
+    secondShadow: '0px 10px 10px rgba(0, 0, 0, 0.07);',
   },
   media: {
     sm: '(min-width: 320px)',

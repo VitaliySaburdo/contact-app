@@ -6,9 +6,9 @@ export const ListWrapper = styled.div`
   height: 500px;
   padding: 0;
   border: 1px solid;
-  border-color: ${props => props.theme.colors.btnBorderColor};
+  border-color: ${p => p.theme.colors.btnBorderColor};
   border-radius: 5px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: ${p => p.theme.shadows.secondShadow};
 
   /* Styling the scrollbar */
   ::-webkit-scrollbar {
