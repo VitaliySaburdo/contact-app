@@ -59,7 +59,7 @@ export const Item = styled.li`
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  box-shadow: ${p => p.theme.shadows.mainShadow};
   &:last-child {
     margin-bottom: 0;
   }
@@ -74,10 +74,14 @@ export const Button = styled.button`
   height: 30px;
   cursor: pointer;
   font-size: 16px;
-  color: white;
-  background-color: ${props =>
-    props.edit ? 'orange' : props.delete ? '#de0000' : 'initial'};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  color: ${p => p.theme.colors.clearWhite};
+  background-color: ${p =>
+    p.edit
+      ? p.theme.colors.btnEditColor
+      : p.delete
+      ? p.theme.colors.btnDeleteColor
+      : 'initial'};
+  box-shadow: ${p => p.theme.shadows.mainShadow};
   border-radius: 4px;
   border: none;
   outline: none;
@@ -86,8 +90,12 @@ export const Button = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: ${props =>
-      props.edit ? '#FF9966' : props.delete ? '#F44336' : 'initial'};
+    background-color: ${p =>
+      p.edit
+        ? p.theme.colors.btnEditColor
+        : p.delete
+        ? p.theme.colors.btnDeleteHoverColor
+        : 'initial'};
   }
 `;
 

@@ -24,6 +24,9 @@ export const theme = Object.freeze({
     btnEditColor: 'orange',
     btnSuccessHoverColor: '#13ba00',
     btnEditHoverColor: '#FF9966',
+    btnDeleteColor: '#de0000',
+    btnDeleteHoverColor: '#F44336',
+
     // Scroll bar style
     ScrollBarColor: '#888',
     ScrollBarHoverColor: '#888',
@@ -31,7 +34,7 @@ export const theme = Object.freeze({
     currentColor: 'currentColor',
   },
   shadows: {
-    mainShadow: '3px 8px 14px rgba(136, 198, 253, 0.19)',
+    mainShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)',
     secondShadow: '7px 13px 14px rgba(116, 177, 232, 0.24)',
   },
   media: {
