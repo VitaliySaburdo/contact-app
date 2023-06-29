@@ -1,13 +1,13 @@
-import { NavbarLink, NavBar } from './Navigation.styled';
+import { NavbarLink, NavBar, StyledSpan } from './Navigation.styled';
 import phonebook from '../../images/phone-book.png';
 
 export const Navigation = () => {
   return (
     <NavBar>
       <NavbarLink to="/">
-        <span>
+        <StyledSpan>
           <img src={phonebook} alt="phonebook" width={25} />
-        </span>
+        </StyledSpan>
         <span>Contact app</span>
       </NavbarLink>
     </NavBar>
