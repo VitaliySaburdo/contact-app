@@ -9,6 +9,19 @@ export const NavWrapper = styled.div`
   align-items: center;
 `;
 
+export const AuthNavWrapper = styled.div`
+  display: none;
+  @media screen and (min-width: 480px) {
+    display: block;
+  }
+`;
+export const MobileNavWrapper = styled.div`
+  display: block;
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+`;
+
 export const NavbarLink = styled(NavLink)`
   text-decoration: none;
   font-family: 'Poppins', sans-serif;

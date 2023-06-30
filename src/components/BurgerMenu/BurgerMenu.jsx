@@ -56,7 +56,7 @@ export const BurgerMenu = () => {
           rounded="true"
           label="Show menu"
           size={20}
-          color="#FFC107"
+          color="#455a64"
           distance="md"
           duration={0.6}
         />
