@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/contact-app/static/css/main.5a55c4ff.css",
-    "main.js": "/contact-app/static/js/main.5a03132a.js",
+    "main.js": "/contact-app/static/js/main.0bf74d12.js",
     "static/js/39.13343009.chunk.js": "/contact-app/static/js/39.13343009.chunk.js",
     "static/js/873.0f691b9b.chunk.js": "/contact-app/static/js/873.0f691b9b.chunk.js",
     "static/js/77.7991745a.chunk.js": "/contact-app/static/js/77.7991745a.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/598.fd2f1e65.chunk.js": "/contact-app/static/js/598.fd2f1e65.chunk.js",
     "static/js/41.682fb6d4.chunk.js": "/contact-app/static/js/41.682fb6d4.chunk.js",
     "static/js/113.4976cfef.chunk.js": "/contact-app/static/js/113.4976cfef.chunk.js",
-    "static/js/578.4e4257c6.chunk.js": "/contact-app/static/js/578.4e4257c6.chunk.js",
+    "static/js/243.cebb7e75.chunk.js": "/contact-app/static/js/243.cebb7e75.chunk.js",
     "static/media/user.png": "/contact-app/static/media/user.a9d3018de4494a5b2982.png",
     "static/media/Hero.jpg": "/contact-app/static/media/Hero.4193aba04b82b537a769.jpg",
     "static/media/phones.png": "/contact-app/static/media/phones.8f83c388f3b60f7e5e51.png",
@@ -18,7 +18,7 @@
     "static/media/icons.svg": "/contact-app/static/media/icons.e16b1c9b6d4eba9118a82a2deb763c83.svg",
     "index.html": "/contact-app/index.html",
     "main.5a55c4ff.css.map": "/contact-app/static/css/main.5a55c4ff.css.map",
-    "main.5a03132a.js.map": "/contact-app/static/js/main.5a03132a.js.map",
+    "main.0bf74d12.js.map": "/contact-app/static/js/main.0bf74d12.js.map",
     "39.13343009.chunk.js.map": "/contact-app/static/js/39.13343009.chunk.js.map",
     "873.0f691b9b.chunk.js.map": "/contact-app/static/js/873.0f691b9b.chunk.js.map",
     "77.7991745a.chunk.js.map": "/contact-app/static/js/77.7991745a.chunk.js.map",
@@ -26,10 +26,10 @@
     "598.fd2f1e65.chunk.js.map": "/contact-app/static/js/598.fd2f1e65.chunk.js.map",
     "41.682fb6d4.chunk.js.map": "/contact-app/static/js/41.682fb6d4.chunk.js.map",
     "113.4976cfef.chunk.js.map": "/contact-app/static/js/113.4976cfef.chunk.js.map",
-    "578.4e4257c6.chunk.js.map": "/contact-app/static/js/578.4e4257c6.chunk.js.map"
+    "243.cebb7e75.chunk.js.map": "/contact-app/static/js/243.cebb7e75.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a55c4ff.css",
-    "static/js/main.5a03132a.js"
+    "static/js/main.0bf74d12.js"
   ]
 }
