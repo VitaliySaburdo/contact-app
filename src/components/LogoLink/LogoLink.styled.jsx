@@ -13,12 +13,9 @@ export const LogoTitle = styled.h2`
   font-family: ${p => p.theme.fonts.second};
   font-style: italic;
   font-weight: 700;
-  font-size: ${p => p.theme.fontSizes.linkFontSize};
+  font-size: ${p => p.theme.fontSizes.mainFontSize};
   color: ${p => p.theme.colors.secondaryColor};
   text-align: center;
-  @media screen and (${props => props.theme.media.md}) {
-    font-size: ${p => p.theme.fontSizes.mainFontSize};
-  }
   @media screen and (${props => props.theme.media.lg}) {
     font-size: ${p => p.theme.fontSizes.menuTitleSize};
   }
