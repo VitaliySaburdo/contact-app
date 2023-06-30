@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.header``;
+export const HeaderWrapper = styled.header`
+  display: flex;
+`;
 
 export const NavWrapper = styled.div`
   display: flex;

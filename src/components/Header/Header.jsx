@@ -1,4 +1,4 @@
-import { Navigation } from '../Navigation/Navigation';
+import { LogoLink } from '../LogoLink/LogoLink';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import {
@@ -19,7 +19,7 @@ export const Header = () => {
     <HeaderWrapper>
       <Container>
         <NavWrapper>
-          <Navigation />
+          <LogoLink />
           {isLoggedIn ? (
             <NavbarLink to="/contacts">
               <UserMenu />
@@ -29,10 +29,10 @@ export const Header = () => {
               <AuthNav />
             </AuthNavWrapper>
           )}
+          <MobileNavWrapper>
+            <BurgerMenu />
+          </MobileNavWrapper>
         </NavWrapper>
-        <MobileNavWrapper>
-          <BurgerMenu />
-        </MobileNavWrapper>
       </Container>
     </HeaderWrapper>
   );
