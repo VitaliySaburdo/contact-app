@@ -1,15 +1,17 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { useAuth } from 'hooks/useAuth';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { Spin as Hamburger } from 'hamburger-react';
 import { Burger, BoxNav, BoxUser, Box } from './BurgerMenu.styled';
-import { Nav } from '../Nav/Nav';
+
 import { AuthNav } from '../AuthNav/AuthNav';
 import PropTypes from 'prop-types';
-import { UserNav } from 'components/Navigation/UserNav/UserNav';
+
+import { useSelector } from 'react-redux';
+import { UserMenu } from 'components/UserMenu/UserMenu';
 
 export const BurgerMenu = () => {
-  const { isLoggedIn } = useAuth();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
@@ -30,7 +32,7 @@ export const BurgerMenu = () => {
     document.addEventListener('mousedown', handler);
 
     return () => {
-    document.removeEventListener('mousedown', handler);
+      document.removeEventListener('mousedown', handler);
     };
   }, []);
 
@@ -62,11 +64,9 @@ export const BurgerMenu = () => {
 
       <Box isOpen={isOpen} onClick={handleClose} ref={menuRef}>
         <BoxUser>
-        {isLoggedIn ? <UserNav isOpen={isOpen}/> : <AuthNav />}
+          {isLoggedIn ? <UserMenu isOpen={isOpen} /> : <AuthNav />}
         </BoxUser>
-        <BoxNav>
-          <Nav />
-        </BoxNav>
+        <BoxNav></BoxNav>
       </Box>
     </>
   );

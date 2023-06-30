@@ -5,6 +5,7 @@ import { HeaderWrapper, NavWrapper, NavbarLink } from './Header.styled';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';
 import { Container } from 'components/Container/Container';
+import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
 
 export const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -21,6 +22,7 @@ export const Header = () => {
             <AuthNav />
           )}
         </NavWrapper>
+        <BurgerMenu />
       </Container>
     </HeaderWrapper>
   );

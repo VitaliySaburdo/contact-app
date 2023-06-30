@@ -4,11 +4,10 @@ export const selectUser = state => state.auth.user.name;
 
 export const selectIsRefreshing = state => state.auth.isRefreshing;
 
-
 const authSelectors = {
   selectIsLoggedIn,
   selectUser,
-selectIsRefreshing
+  selectIsRefreshing,
 };
 
 export default authSelectors;
