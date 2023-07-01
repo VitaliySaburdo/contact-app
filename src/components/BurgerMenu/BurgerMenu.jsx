@@ -58,7 +58,7 @@ export const BurgerMenu = () => {
           size={20}
           color="#455a64"
           distance="md"
-          duration={0.6}
+          duration={0.3}
         />
       </Burger>
 

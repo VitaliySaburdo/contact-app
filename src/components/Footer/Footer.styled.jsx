@@ -6,8 +6,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px 20px 0px;
+  padding: 10px 0px 20px 0px;
   height: 100%;
+
+  @media screen and(${p=>p.theme.media.md}){
+    padding: 10px 20px 20px 0px;
+  }
 `;
 
 export const Link = styled.a`

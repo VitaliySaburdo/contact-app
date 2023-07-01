@@ -13,13 +13,13 @@ export const NavWrapper = styled.div`
 
 export const AuthNavWrapper = styled.div`
   display: none;
-  @media screen and (min-width: 480px) {
+  @media screen and (${p=>p.theme.media.md}) {
     display: block;
   }
 `;
 export const MobileNavWrapper = styled.div`
   display: block;
-  @media screen and (min-width: 480px) {
+  @media screen and (${p=>p.theme.media.md}) {
     display: none;
   }
 `;

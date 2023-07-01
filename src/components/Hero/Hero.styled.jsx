@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import background from '../../images/Hero.jpg';
+import img_480 from '../../images/Hero/Hero_480.jpg'
+import img_768 from '../../images/Hero/Hero_768.jpg';
+import img_1280 from '../../images/Hero/Hero_1280.jpg';
 import { Link } from 'react-router-dom';
 
 export const HeroLink = styled(Link)`
@@ -12,12 +14,28 @@ export const HeroWrapper = styled.div`
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(${background});
+    url(${img_480});
   margin-left: auto;
   margin-right: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (${p=>p.theme.media.md}) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(${img_768});
+  };
+    @media screen and (${p=>p.theme.media.lg}) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(${img_1280});
+  }
 `;
 
 export const Title = styled.h1`
