@@ -2,15 +2,12 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+width: 320px;
 
-  @media screen and (${props => props.theme.media.smToMd}) {
-    width: 320px;
-  }
-
-  @media screen and (${props => props.theme.media.mdToLg}) {
+  @media screen and (${props => props.theme.media.md}) {
     width: 768px;
-    padding: 0 32px;
+    padding: 0 16px;
   }
 
   @media screen and (${props => props.theme.media.lg}) {
