@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/contact-app/static/css/main.5a55c4ff.css",
-    "main.js": "/contact-app/static/js/main.13ad099f.js",
-    "static/js/39.13343009.chunk.js": "/contact-app/static/js/39.13343009.chunk.js",
+    "main.js": "/contact-app/static/js/main.73ed2077.js",
+    "static/js/837.2ba7c834.chunk.js": "/contact-app/static/js/837.2ba7c834.chunk.js",
     "static/js/873.0f691b9b.chunk.js": "/contact-app/static/js/873.0f691b9b.chunk.js",
     "static/js/77.7991745a.chunk.js": "/contact-app/static/js/77.7991745a.chunk.js",
     "static/js/480.ccdd5c9d.chunk.js": "/contact-app/static/js/480.ccdd5c9d.chunk.js",
@@ -11,15 +11,17 @@
     "static/js/113.4976cfef.chunk.js": "/contact-app/static/js/113.4976cfef.chunk.js",
     "static/js/243.cebb7e75.chunk.js": "/contact-app/static/js/243.cebb7e75.chunk.js",
     "static/media/user.png": "/contact-app/static/media/user.a9d3018de4494a5b2982.png",
-    "static/media/Hero.jpg": "/contact-app/static/media/Hero.4193aba04b82b537a769.jpg",
+    "static/media/Hero_1280.jpg": "/contact-app/static/media/Hero_1280.4193aba04b82b537a769.jpg",
     "static/media/phones.png": "/contact-app/static/media/phones.8f83c388f3b60f7e5e51.png",
+    "static/media/Hero_768.jpg": "/contact-app/static/media/Hero_768.436fa01fd1e58a3b32b2.jpg",
+    "static/media/Hero_480.jpg": "/contact-app/static/media/Hero_480.8cc3e330600094c5d4f4.jpg",
     "static/media/Registration-photo.jpg": "/contact-app/static/media/Registration-photo.18d80537a88772700192.jpg",
     "static/media/phone-book.png": "/contact-app/static/media/phone-book.c3ed674a36e05646433b.png",
     "static/media/icons.svg": "/contact-app/static/media/icons.e16b1c9b6d4eba9118a82a2deb763c83.svg",
     "index.html": "/contact-app/index.html",
     "main.5a55c4ff.css.map": "/contact-app/static/css/main.5a55c4ff.css.map",
-    "main.13ad099f.js.map": "/contact-app/static/js/main.13ad099f.js.map",
-    "39.13343009.chunk.js.map": "/contact-app/static/js/39.13343009.chunk.js.map",
+    "main.73ed2077.js.map": "/contact-app/static/js/main.73ed2077.js.map",
+    "837.2ba7c834.chunk.js.map": "/contact-app/static/js/837.2ba7c834.chunk.js.map",
     "873.0f691b9b.chunk.js.map": "/contact-app/static/js/873.0f691b9b.chunk.js.map",
     "77.7991745a.chunk.js.map": "/contact-app/static/js/77.7991745a.chunk.js.map",
     "480.ccdd5c9d.chunk.js.map": "/contact-app/static/js/480.ccdd5c9d.chunk.js.map",
@@ -30,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.5a55c4ff.css",
-    "static/js/main.13ad099f.js"
+    "static/js/main.73ed2077.js"
   ]
 }
