@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img_480 from '../../images/Hero/Hero_480.jpg'
+import img_480 from '../../images/Hero/Hero_480.jpg';
 import img_768 from '../../images/Hero/Hero_768.jpg';
 import img_1280 from '../../images/Hero/Hero_1280.jpg';
 import { Link } from 'react-router-dom';
@@ -20,21 +20,24 @@ export const HeroWrapper = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (${p=>p.theme.media.md}) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(${img_768});
-  };
-    @media screen and (${p=>p.theme.media.lg}) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(${img_1280});
+  max-width: 320px;
+  @media screen and (${p => p.theme.media.md}) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(${img_768});
+    max-width: 768px;
+  }
+  @media screen and (${p => p.theme.media.lg}) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(${img_1280});
+    max-width: 1280px;
   }
 `;
 

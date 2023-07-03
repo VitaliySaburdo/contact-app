@@ -9,17 +9,21 @@ export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+  /* @media screen and (${props => props.theme.media.md}) {
+    padding: 0 16px;
+  } */
 `;
 
 export const AuthNavWrapper = styled.div`
   display: none;
-  @media screen and (${p=>p.theme.media.md}) {
+  @media screen and (${p => p.theme.media.md}) {
     display: block;
   }
 `;
 export const MobileNavWrapper = styled.div`
   display: block;
-  @media screen and (${p=>p.theme.media.md}) {
+  @media screen and (${p => p.theme.media.md}) {
     display: none;
   }
 `;
