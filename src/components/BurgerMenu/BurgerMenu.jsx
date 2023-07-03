@@ -64,9 +64,9 @@ export const BurgerMenu = () => {
       </Burger>
 
       <Box isOpen={isOpen} onClick={handleClose} ref={menuRef}>
-        <BoxUser>
+        
           {isLoggedIn ? <UserMenu isOpen={isOpen} /> : <AuthNav />}
-        </BoxUser>
+        
 
       </Box>
     </>

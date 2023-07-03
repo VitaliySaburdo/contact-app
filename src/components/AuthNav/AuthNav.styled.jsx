@@ -2,8 +2,12 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
+   display: flex;
+   flex-direction: column;
   gap: 20px;
+  @media screen and (${props => props.theme.media.md}) {
+  flex-direction: row;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`

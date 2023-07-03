@@ -16,7 +16,9 @@ export const Box = styled.div`
   right: 0;
   height: 100%;
   width: 100%;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   background-color: ${props => props.theme.colors.clearWhite};
