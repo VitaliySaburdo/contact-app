@@ -11,7 +11,7 @@ export const Burger = styled.div`
 // backdrop
 export const Box = styled.div`
   position: fixed;
-  z-index: 100;
+  z-index: 500;
   top: 0;
   right: 0;
   height: 100%;
