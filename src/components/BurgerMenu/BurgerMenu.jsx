@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { Spin as Hamburger } from 'hamburger-react';
-import { Burger, BoxNav, BoxUser, Box } from './BurgerMenu.styled';
+import { Burger, BoxUser, Box } from './BurgerMenu.styled';
 
 import { AuthNav } from '../AuthNav/AuthNav';
 import PropTypes from 'prop-types';
@@ -46,7 +46,7 @@ export const BurgerMenu = () => {
 
   return (
     <>
-      <Burger>
+      <Burger tyle={{ zIndex: 1001 }}>
         <Hamburger
           isOpen={isOpen}
           onClick={handleOpen}
@@ -58,7 +58,8 @@ export const BurgerMenu = () => {
           size={20}
           color="#455a64"
           distance="md"
-          duration={0.3}
+          duration={0.3} 
+        
         />
       </Burger>
 
@@ -66,7 +67,7 @@ export const BurgerMenu = () => {
         <BoxUser>
           {isLoggedIn ? <UserMenu isOpen={isOpen} /> : <AuthNav />}
         </BoxUser>
-        <BoxNav></BoxNav>
+
       </Box>
     </>
   );
