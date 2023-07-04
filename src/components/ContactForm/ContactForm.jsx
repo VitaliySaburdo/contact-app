@@ -11,7 +11,8 @@ export function ContactForm({ buttonLabel, onSubmit, name, number }) {
     number: yup
       .string('Enter your phone number')
       .matches(/^\d+$/, 'Number should only contain numeric values')
-      .min(7, 'Number should be of minimum 7 characters length')
+      .min(5, 'Number should be of minimum 5 characters length')
+      .max(10, 'Number should be of maximum 10 characters length')
       .required('Phone number is required'),
   });
 
