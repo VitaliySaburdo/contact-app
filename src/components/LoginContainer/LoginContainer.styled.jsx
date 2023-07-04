@@ -10,8 +10,8 @@ export const Container = styled.div`
 export const Title = styled.div`
   position: absolute;
   width: 350px;
-  left: 20%;
-  top: 8%;
+  left: 25%;
+  top: 5%;
   font-family: ${p => p.theme.fonts.second};
   font-weight: ${p => p.theme.fontWeights.regular};
   font-size: 16px;
@@ -21,8 +21,8 @@ export const Title = styled.div`
 
 export const Circus = styled.div`
   position: absolute;
-  left: 78px;
-  top: 100px;
+  left: 19%;
+  top: 20%;
   padding: 60px;
   display: flex;
   align-items: center;
