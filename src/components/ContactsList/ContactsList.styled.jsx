@@ -9,7 +9,6 @@ export const ListWrapper = styled.div`
   border-color: ${p => p.theme.colors.btnBorderColor};
   border-radius: 5px;
   box-shadow: ${p => p.theme.shadows.secondShadow};
-  
 
   /* Styling the scrollbar */
   ::-webkit-scrollbar {
@@ -29,9 +28,9 @@ export const ListWrapper = styled.div`
     background-color: transparent;
   }
 
-   @media screen and (${p => p.theme.media.md}) {
+  @media screen and (${p => p.theme.media.md}) {
     width: 540px;
-   }
+  }
 `;
 
 export const List = styled.ul`
@@ -55,18 +54,20 @@ export const Item = styled.li`
   font-weight: 700;
   font-size: 16px;
   display: flex;
-  height: 45px;
+  /* height: 45px; */
   border-radius: 6px;
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   margin-bottom: 15px;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 5px 10px 5px 10px;
   box-shadow: ${p => p.theme.shadows.mainShadow};
   &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (${p => p.theme.media.md}) {
+    padding: 10px 20px 10px 20px;
   }
 `;
 
@@ -106,5 +107,8 @@ export const Button = styled.button`
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  @media screen and (${p => p.theme.media.md}) {
+    gap: 20px;
+  }
 `;
