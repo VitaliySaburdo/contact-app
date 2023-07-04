@@ -60,6 +60,6 @@ export const Img = styled.img`
   position: absolute;
   max-width: 70%;
   @media screen and (${p => p.theme.media.lg}) {
-    max-width: 50%;
+    max-width: 100%;
   }
 `;
