@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const ListWrapper = styled.div`
   overflow-y: scroll;
-  width: 540px;
+  width: 300px;
   height: 500px;
   padding: 0;
   border: 1px solid;
   border-color: ${p => p.theme.colors.btnBorderColor};
   border-radius: 5px;
   box-shadow: ${p => p.theme.shadows.secondShadow};
+  
 
   /* Styling the scrollbar */
   ::-webkit-scrollbar {
@@ -27,6 +28,10 @@ export const ListWrapper = styled.div`
   ::-webkit-scrollbar-track {
     background-color: transparent;
   }
+
+   @media screen and (${p => p.theme.media.md}) {
+    width: 540px;
+   }
 `;
 
 export const List = styled.ul`

@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  height: 650px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (${p => p.theme.media.md}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 650px;
+  }
 `;
 
 export const FormContainer = styled.div`

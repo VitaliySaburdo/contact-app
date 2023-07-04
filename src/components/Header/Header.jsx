@@ -22,10 +22,10 @@ export const Header = () => {
           <LogoLink />
           {isLoggedIn ? (
             <AuthNavWrapper>
-            <NavbarLink to="/contacts">
-              <UserMenu />
+              <NavbarLink to="/contacts">
+                <UserMenu />
               </NavbarLink>
-              </AuthNavWrapper>
+            </AuthNavWrapper>
           ) : (
             <AuthNavWrapper>
               <AuthNav />

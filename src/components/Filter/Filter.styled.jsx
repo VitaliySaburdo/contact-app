@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import TextField from '@mui/material/TextField';
 
 export const Container = styled.div`
   display: flex;
@@ -6,16 +7,11 @@ export const Container = styled.div`
   margin-bottom: 30px;
 `;
 
-export const Input = styled.input`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
+export const Input = styled(TextField)`
+width: 220px;
+@media screen and (${p => p.theme.media.md}) {
   width: 420px;
-  border: 1px solid ${p => p.theme.colors.mainBorderColor};
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 15px;
+}
 `;
 
 export const Label = styled.label`

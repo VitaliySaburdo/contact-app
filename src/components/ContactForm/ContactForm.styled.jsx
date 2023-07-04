@@ -3,7 +3,10 @@ import styled from 'styled-components';
 export const Form = styled.form`
   margin-top: 10px;
   margin-bottom: 30px;
-  width: 440px;
+  width: 220px;
+@media screen and (${p => p.theme.media.md}) {
+  width: 420px;
+}
 `;
 
 export const Label = styled.label`
