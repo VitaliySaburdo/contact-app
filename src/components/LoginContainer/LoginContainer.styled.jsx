@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+display: none;
+@media screen and (${p => p.theme.media.md}){
+  display: block;
   position: relative;
   height: 680px;
   width: 730px;
   background-image: linear-gradient(324.93deg, #007aff 0.74%, #0f70da 100%);
+}
+  
 `;
 
 export const Title = styled.div`

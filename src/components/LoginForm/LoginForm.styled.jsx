@@ -2,10 +2,17 @@ import styled from 'styled-components';
 import { Field } from 'formik';
 
 export const Form = styled.form`
-  margin-left: auto;
+margin-left: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+@media screen and (${p => p.theme.media.md}){
+margin-left: auto;
   padding-top: 70px;
   padding-left: 80px;
   padding-right: 80px;
+}
+  
 `;
 
 export const Box = styled.div`
