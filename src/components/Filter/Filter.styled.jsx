@@ -10,6 +10,9 @@ export const Container = styled.div`
 export const Input = styled(TextField)`
 width: 220px;
 @media screen and (${p => p.theme.media.md}) {
+  width: 250px;
+}
+@media screen and (${p => p.theme.media.lg}) {
   width: 420px;
 }
 `;

@@ -2,16 +2,20 @@ import styled from 'styled-components';
 import { Field } from 'formik';
 
 export const Form = styled.form`
- margin-left: auto;
+  margin-left: auto;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-@media screen and (${p => p.theme.media.md}){
-margin-left: auto;
-  padding-top: 70px;
-  padding-left: 80px;
-  padding-right: 80px;
-}
+  @media screen and (${p => p.theme.media.md}) {
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (${p => p.theme.media.lg}) {
+    padding-top: 70px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 `;
 
 export const Box = styled.div`
@@ -24,7 +28,10 @@ export const Title = styled.h2`
   font-weight: 600px;
   font-size: 19px;
   text-align: center;
-  padding: 0 0 60px 0;
+  padding: 0 0 20px 0;
+  @media screen and (${p => p.theme.media.lg}){
+    padding: 0 0 60px 0;
+  }
 `;
 
 export const Input = styled(Field)`

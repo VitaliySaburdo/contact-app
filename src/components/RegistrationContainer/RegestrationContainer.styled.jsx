@@ -27,14 +27,19 @@ export const Container = styled.div`
 export const Title = styled.div`
   position: absolute;
   width: 350px;
-  left: 25%;
-  top: 25%;
+  left: 3%;
+  top: 28%;
   font-family: 'Poppins';
   font-weight: 400px;
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   color: ${p => p.theme.colors.clearWhite};
   z-index: 100;
+  @media screen and (${p => p.theme.media.lg}){
+    font-size: 22px;
+    left: 25%;
+    top: 25%;
+  }
 `;
 
 export const Img = styled.img`

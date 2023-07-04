@@ -3,11 +3,16 @@ import styled from 'styled-components';
 export const Form = styled.form`
   margin-bottom: 30px;
   width: 220px;
-@media screen and (${p => p.theme.media.md}) {
-  width: 420px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
+  @media screen and (${p => p.theme.media.md}) {
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  @media screen and (${p => p.theme.media.lg}) {
+    width: 420px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Label = styled.label`
@@ -17,13 +22,15 @@ export const Label = styled.label`
 `;
 
 export const Container = styled.div`
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (${p => p.theme.media.md}){
-margin-top: 30px;
+  @media screen and (${p => p.theme.media.md}) {
+    margin-top: 10px;
+  }
+  @media screen and (${p => p.theme.media.lg}) {
+    margin-top: 30px;
   }
 `;
 

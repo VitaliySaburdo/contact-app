@@ -29,6 +29,10 @@ export const ListWrapper = styled.div`
   }
 
   @media screen and (${p => p.theme.media.md}) {
+    height: 480px;
+    width: 540px;
+  }
+    @media screen and (${p => p.theme.media.lg}) {
     width: 540px;
   }
 `;
