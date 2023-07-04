@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import img from '../../images/Registration-photo.jpg';
 
 export const Container = styled.div`
-  position: relative;
+display: none;
+@media screen and (${p => p.theme.media.md}){
+  display: block;
+ position: relative;
   height: 680px;
   width: 730px;
   background-image: linear-gradient(
@@ -14,6 +17,8 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+ 
 `;
 
 export const Title = styled.div`

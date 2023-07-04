@@ -8,7 +8,7 @@ export const HeroLink = styled(Link)`
   text-decoration: none;
 `;
 export const HeroWrapper = styled.div`
-  height: 700px;
+  height: 550px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
