@@ -7,11 +7,11 @@ import userIcon from '../../images/user.png';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const name = useSelector(selectUser);
-  
+
   return (
     <Wrapper>
       <Box>
-        <img src={userIcon} alt="user" width={36} />
+        <img src={userIcon} alt="user" width={40} />
         <UserName>{name}</UserName>
       </Box>
       <Button type="button" onClick={() => dispatch(logOut())}>
