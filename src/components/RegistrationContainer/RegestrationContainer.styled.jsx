@@ -2,23 +2,26 @@ import styled from 'styled-components';
 import img from '../../images/Registration-photo.jpg';
 
 export const Container = styled.div`
-display: none;
-@media screen and (${p => p.theme.media.md}){
-  display: block;
- position: relative;
-  height: 680px;
-  width: 730px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(${img});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
- 
+  display: none;
+  @media screen and (${p => p.theme.media.md}) {
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 630px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(${img});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media screen and (${p => p.theme.media.lg}) {
+      height: 680px;
+      width: 730px;
+    }
+  }
 `;
 
 export const Title = styled.div`

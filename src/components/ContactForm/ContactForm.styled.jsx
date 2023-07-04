@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  margin-top: 10px;
   margin-bottom: 30px;
   width: 220px;
 @media screen and (${p => p.theme.media.md}) {
   width: 420px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 `;
 
@@ -16,11 +17,14 @@ export const Label = styled.label`
 `;
 
 export const Container = styled.div`
-  margin-top: 30px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (${p => p.theme.media.md}){
+margin-top: 30px;
+  }
 `;
 
 export const Title = styled.p`
