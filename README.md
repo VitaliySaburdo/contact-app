@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Tweet-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Introduction](#Introduction)
+- [Technologies](#Technologies)
+- [How to Install and Run the Project](#How-to-Install-and-Run-the-Project)
+- [How to Use the Project](#How-to-Use-the-Project)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+I present to your attention a react application for working with user tweets.
+The application allows you to edit tweets as well as filter them. I wish you a
+pleasant use of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The following libraries and technologies are used in the project:
 
-### `npm test`
+- react
+- axios
+- react-router-dom
+- react-loader-spinner
+- react-scroll
+- styled-components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://mockapi.io/ was used as a backend
 
-### `npm run build`
+Link to backend: https://63ea64d73363c8700368743e.mockapi.io/users
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Install and Run the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Make sure you have an LTS version of Node.js installed on your computer.
+   [Download and install](https://nodejs.org/en/) if needed.
+2. Install the basic project dependencies with the `npm install` command.
+3. Start development mode by running the `npm start` command.
+4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
+   page will automatically reload after saving changes to project files.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Use the Project
 
-### `npm run eject`
+### Deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The production version of the project will be automatically linted, built and
+deploy to GitHub Pages, in the `gh-pages` branch, every time it is updated
+branch `main`. For example, after a direct push or an accepted pull request. For
+this it is necessary to edit the `homepage` field in the `package.json` file,
+replace `your_username` and `your_repo_name` with your own, and push the changes
+to GitHub.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Deployment status
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The deployment status of the latest commit is displayed with an icon next to its
+ID.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Yellow color** - the project is being built and deployed.
+- **Green color** - deployment completed successfully.
+- **Red color** - an error occurred during linting, build or deployment.
 
-## Learn More
+More detailed information about the status can be viewed by clicking on the
+icon, and in drop-down window to follow the link `Details`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How it works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![How it works](./assets/how-it-works.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. After each push to the `main` branch of the GitHub repository, a special
+   script (GitHub Action) from `.github/workflows/deploy.yml` file.
+2. All repository files are copied to the server where the project is
+   initialized and passes linting and assembly before deployment.
+3. If all steps were successful, the assembled production version of the project
+   files goes to the `gh-pages` branch. Otherwise, in the execution log The
+   script will indicate what the problem is.
