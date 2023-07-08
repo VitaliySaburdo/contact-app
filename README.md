@@ -20,11 +20,15 @@ The following libraries and technologies are used in the project:
 
 - react
 - react-redux
+- reduxjs/toolkit
+- redux-persist
 - react-router-dom
 - react-loader-spinner
 - react-scroll
+- react-loader-spinner
 - axios
 - styled-components
+- mui/material
 - formik
 - yup
 - hamburger-react
