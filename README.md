@@ -32,9 +32,11 @@ The following libraries and technologies are used in the project:
 
 ## Backend
 
-In this project I am using my own backend implementation. Link on the
-documentation is here: https://contacts-api-servise.onrender.com/api-docs/ Link
-on the repository: https://github.com/VitaliySaburdo/contacts-api-servise
+In this project I am using my own backend implementation.
+
+- Link on the documentation is here:
+  https://contacts-api-servise.onrender.com/api-docs/
+- Link on the repository: https://github.com/VitaliySaburdo/contacts-api-servise
 
 ## How to Install and Run the Project
 
