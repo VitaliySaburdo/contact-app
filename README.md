@@ -4,6 +4,7 @@
 
 - [Introduction](#Introduction)
 - [Technologies](#Technologies)
+- [Backend](#Backend)
 - [How to Install and Run the Project](#How-to-Install-and-Run-the-Project)
 - [How to Use the Project](#How-to-Use-the-Project)
 
@@ -18,18 +19,21 @@ pleasant use of the application.
 The following libraries and technologies are used in the project:
 
 - react
-- axios
+- react-redux
 - react-router-dom
 - react-loader-spinner
 - react-scroll
+- axios
 - styled-components
 - formik
+- yup
 - hamburger-react
 - react-hot-toast
 
-https://mockapi.io/ was used as a backend
+## Backend
 
-Link to backend: https://63ea64d73363c8700368743e.mockapi.io/users
+In this project I am using my own backend implementation. Link on the
+documentation is here: https://contacts-api-servise.onrender.com/api-docs/
 
 ## How to Install and Run the Project
 
