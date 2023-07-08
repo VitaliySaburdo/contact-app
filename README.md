@@ -23,6 +23,9 @@ The following libraries and technologies are used in the project:
 - react-loader-spinner
 - react-scroll
 - styled-components
+- formik
+- hamburger-react
+- react-hot-toast
 
 https://mockapi.io/ was used as a backend
 
