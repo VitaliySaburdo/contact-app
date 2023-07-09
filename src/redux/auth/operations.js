@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import notify from '../../helpers/notification';
+import {notify} from '../../helpers/notification';
 
 axios.defaults.baseURL = 'https://contacts-api-servise.onrender.com';
 
