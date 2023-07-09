@@ -2,6 +2,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const notify = (type, text) => {
+  
   const toastConfig = {
     position: 'top-left',
     autoClose: 3000,
@@ -12,6 +13,7 @@ export const notify = (type, text) => {
     progress: undefined,
     theme: 'light',
   };
+
   switch (type) {
     case 'error':
       toast.error(text, toastConfig);

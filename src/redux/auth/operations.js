@@ -26,7 +26,7 @@ export const register = createAsyncThunk(
       if (error.message === 'Request failed with status code 409') {
         notify(
           'warning',
-          `User "${credentials.email}" is already registered, please login `
+          `User ${credentials.email} is already registered, please login`
         );
       }
       return thunkAPI.rejectWithValue(error.message);
@@ -42,8 +42,13 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      const { message } = error;
-      alert(message);
+      console.log(error.message);
+         if (error.message === 'Request failed with status code 401') {
+        notify(
+          'warning',
+          `User "${values.email}" is not found, please register and try again`
+        );
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   }

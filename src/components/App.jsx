@@ -7,6 +7,7 @@ import { PrivateRoute } from '../helpers/PrivateRoute';
 import { RestrictedRoute } from '../helpers/RestrictedRoute';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { theme } from '../theme/theme';
+import { ToastContainer } from 'react-toastify';
 
 const Home = lazy(() => import('../pages/Home'));
 const Register = lazy(() => import('../pages/Register'));
@@ -22,6 +23,7 @@ export function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
