@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import notify from '../../helpers/notification';
 
 axios.defaults.baseURL = 'https://contacts-api-servise.onrender.com';
 
@@ -21,7 +22,13 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
+      if (error.message === 'Request failed with status code 409') {
+        notify(
+          'warning',
+          `User "${credentials.email}" is already registered, please login `
+        );
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   }
