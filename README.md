@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Contact-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Introduction](#Introduction)
+- [Technologies](#Technologies)
+- [Backend](#Backend)
+- [How to Install and Run the Project](#How-to-Install-and-Run-the-Project)
+- [How to Use the Project](#How-to-Use-the-Project)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+I present to your attention a react application for working with user contacts.
+The application allows you to edit contacts as well as filter them. I wish you a
+pleasant use of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The following libraries and technologies are used in the project:
 
-### `npm test`
+- react
+- react-redux
+- reduxjs/toolkit
+- redux-persist
+- react-router-dom
+- react-loader-spinner
+- react-scroll
+- react-loader-spinner
+- axios
+- styled-components
+- mui/material
+- formik
+- yup
+- hamburger-react
+- react-hot-toast
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend
 
-### `npm run build`
+In this project I am using my own backend implementation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Link on the documentation is here:
+  https://contacts-api-servise.onrender.com/api-docs/
+- Link on the repository: https://github.com/VitaliySaburdo/contacts-api-servise
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Install and Run the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Make sure you have an LTS version of Node.js installed on your computer.
+   [Download and install](https://nodejs.org/en/) if needed.
+2. Install the basic project dependencies with the `npm install` command.
+3. Start development mode by running the `npm start` command.
+4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
+   page will automatically reload after saving changes to project files.
 
-### `npm run eject`
+## How to Use the Project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Deploy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The production version of the project will be automatically linted, built and
+deploy to GitHub Pages, in the `gh-pages` branch, every time it is updated
+branch `main`. For example, after a direct push or an accepted pull request. For
+this it is necessary to edit the `homepage` field in the `package.json` file,
+replace `your_username` and `your_repo_name` with your own, and push the changes
+to GitHub.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Deployment status
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The deployment status of the latest commit is displayed with an icon next to its
+ID.
 
-## Learn More
+- **Yellow color** - the project is being built and deployed.
+- **Green color** - deployment completed successfully.
+- **Red color** - an error occurred during linting, build or deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+More detailed information about the status can be viewed by clicking on the
+icon, and in drop-down window to follow the link `Details`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How it works
 
-### Code Splitting
+![How it works](./assets/how-it-works.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. After each push to the `main` branch of the GitHub repository, a special
+   script (GitHub Action) from `.github/workflows/deploy.yml` file.
+2. All repository files are copied to the server where the project is
+   initialized and passes linting and assembly before deployment.
+3. If all steps were successful, the assembled production version of the project
+   files goes to the `gh-pages` branch. Otherwise, in the execution log The
+   script will indicate what the problem is.
