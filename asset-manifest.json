@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/contact-app/static/css/main.0b25ea38.css",
-    "main.js": "/contact-app/static/js/main.86a1952f.js",
+    "main.js": "/contact-app/static/js/main.e9ceb0f6.js",
     "static/js/837.373d7a1c.chunk.js": "/contact-app/static/js/837.373d7a1c.chunk.js",
     "static/js/873.1bd3125d.chunk.js": "/contact-app/static/js/873.1bd3125d.chunk.js",
-    "static/js/77.2d51b2af.chunk.js": "/contact-app/static/js/77.2d51b2af.chunk.js",
+    "static/js/77.927c7981.chunk.js": "/contact-app/static/js/77.927c7981.chunk.js",
     "static/js/367.c714a61d.chunk.js": "/contact-app/static/js/367.c714a61d.chunk.js",
-    "static/js/598.2d653e11.chunk.js": "/contact-app/static/js/598.2d653e11.chunk.js",
-    "static/js/516.0151457c.chunk.js": "/contact-app/static/js/516.0151457c.chunk.js",
+    "static/js/206.dac4cacd.chunk.js": "/contact-app/static/js/206.dac4cacd.chunk.js",
+    "static/js/41.682fb6d4.chunk.js": "/contact-app/static/js/41.682fb6d4.chunk.js",
     "static/js/113.4976cfef.chunk.js": "/contact-app/static/js/113.4976cfef.chunk.js",
     "static/media/user.png": "/contact-app/static/media/user.a9d3018de4494a5b2982.png",
     "static/media/Hero_1280.jpg": "/contact-app/static/media/Hero_1280.4193aba04b82b537a769.jpg",
@@ -19,17 +19,17 @@
     "static/media/icons.svg": "/contact-app/static/media/icons.e16b1c9b6d4eba9118a82a2deb763c83.svg",
     "index.html": "/contact-app/index.html",
     "main.0b25ea38.css.map": "/contact-app/static/css/main.0b25ea38.css.map",
-    "main.86a1952f.js.map": "/contact-app/static/js/main.86a1952f.js.map",
+    "main.e9ceb0f6.js.map": "/contact-app/static/js/main.e9ceb0f6.js.map",
     "837.373d7a1c.chunk.js.map": "/contact-app/static/js/837.373d7a1c.chunk.js.map",
     "873.1bd3125d.chunk.js.map": "/contact-app/static/js/873.1bd3125d.chunk.js.map",
-    "77.2d51b2af.chunk.js.map": "/contact-app/static/js/77.2d51b2af.chunk.js.map",
+    "77.927c7981.chunk.js.map": "/contact-app/static/js/77.927c7981.chunk.js.map",
     "367.c714a61d.chunk.js.map": "/contact-app/static/js/367.c714a61d.chunk.js.map",
-    "598.2d653e11.chunk.js.map": "/contact-app/static/js/598.2d653e11.chunk.js.map",
-    "516.0151457c.chunk.js.map": "/contact-app/static/js/516.0151457c.chunk.js.map",
+    "206.dac4cacd.chunk.js.map": "/contact-app/static/js/206.dac4cacd.chunk.js.map",
+    "41.682fb6d4.chunk.js.map": "/contact-app/static/js/41.682fb6d4.chunk.js.map",
     "113.4976cfef.chunk.js.map": "/contact-app/static/js/113.4976cfef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b25ea38.css",
-    "static/js/main.86a1952f.js"
+    "static/js/main.e9ceb0f6.js"
   ]
 }
