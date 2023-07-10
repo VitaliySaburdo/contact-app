@@ -23,7 +23,7 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
         state.loading = false;
       })
-      .addCase(register.rejected, (state, action) => {
+      .addCase(register.rejected, (state, __) => {
         state.loading = false;
       })
       .addCase(logIn.pending, state => {
@@ -35,7 +35,7 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
         state.loading = false;
       })
-      .addCase(logIn.rejected, (state, action) => {
+      .addCase(logIn.rejected, (state, __) => {
         state.loading = false;
       })
       .addCase(logOut.fulfilled, (state, __) => {
