@@ -41,7 +41,8 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      if (error.message === 'Request failed with status code 401') {
+      console.log(error.message);
+      if (error.message === 'Request failed with status code 400') {
         notify(
           'warning',
           `User "${values.email}" is not found, please register and try again`

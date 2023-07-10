@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import { logIn } from 'redux/auth/operations';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Form, Box, Title, Text, Span } from './LoginForm.styled';
 import { NavLink } from 'react-router-dom';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -14,6 +14,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
+import { selectLoading } from 'redux/auth/selectors';
+import { Loader } from 'components/Loader/Loader';
 
 const validationSchema = yup.object({
   email: yup
@@ -22,12 +24,15 @@ const validationSchema = yup.object({
     .required('Email is required'),
   password: yup
     .string('Enter your password')
-    .min(6, 'Password should be of minimum 8 characters length').max(12, 'Too long')
+    .min(6, 'Password should be of minimum 8 characters length')
+    .max(12, 'Too long')
     .required('Password is required'),
 });
 
 export const LoginForm = () => {
   const [showPassword, setShowPassword] = React.useState(false);
+
+  const isLoading = useSelector(selectLoading);
 
   const dispatch = useDispatch();
 
@@ -45,86 +50,89 @@ export const LoginForm = () => {
   });
 
   return (
-    <Box>
-      <Form onSubmit={formik.handleSubmit}>
-        <Title>Login</Title>
-        <FormControl
-          sx={{
-            height: 65,
-          }}
-          fullWidth
-          size="small"
-          margin="none"
-        >
-          <InputLabel
-            error={formik.touched.password && Boolean(formik.errors.password)}
-            htmlFor="email"
+    <>
+      {isLoading && <Loader />}
+      <Box>
+        <Form onSubmit={formik.handleSubmit}>
+          <Title>Login</Title>
+          <FormControl
+            sx={{
+              height: 65,
+            }}
+            fullWidth
+            size="small"
+            margin="none"
           >
-            Email
-          </InputLabel>
-          <OutlinedInput
-            placeholder="Please your email"
-            id="email"
-            name="email"
-            label="Email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-          />
-          <FormHelperText error={true} id="password">
-            {formik.touched.email && formik.errors.email}
-          </FormHelperText>
-        </FormControl>
-        <FormControl
-          sx={{
-            height: 65,
-          }}
-          variant="outlined"
-          fullWidth
-          size="small"
-          margin="none"
-        >
-          <InputLabel
-            error={formik.touched.password && Boolean(formik.errors.password)}
-            htmlFor="password"
+            <InputLabel
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              htmlFor="email"
+            >
+              Email
+            </InputLabel>
+            <OutlinedInput
+              placeholder="Please your email"
+              id="email"
+              name="email"
+              label="Email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+            />
+            <FormHelperText error={true} id="password">
+              {formik.touched.email && formik.errors.email}
+            </FormHelperText>
+          </FormControl>
+          <FormControl
+            sx={{
+              height: 65,
+            }}
+            variant="outlined"
+            fullWidth
+            size="small"
+            margin="none"
           >
-            Password
-          </InputLabel>
-          <OutlinedInput
-            id="password"
-            placeholder="Please your password"
-            name="password"
-            label="Password"
-            type={showPassword ? 'text' : 'password'}
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            error={formik.touched.password && Boolean(formik.errors.password)}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-          <FormHelperText error={true} id="password">
-            {formik.touched.password && formik.errors.password}
-          </FormHelperText>
-        </FormControl>
-        <Button color="primary" variant="contained" fullWidth type="submit">
-          Login
-        </Button>
-        <Text>
-          Don`t have an account
-          <Span>
-            <NavLink to="/register">Register</NavLink>
-          </Span>
-        </Text>
-      </Form>
-    </Box>
+            <InputLabel
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              htmlFor="password"
+            >
+              Password
+            </InputLabel>
+            <OutlinedInput
+              id="password"
+              placeholder="Please your password"
+              name="password"
+              label="Password"
+              type={showPassword ? 'text' : 'password'}
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+            <FormHelperText error={true} id="password">
+              {formik.touched.password && formik.errors.password}
+            </FormHelperText>
+          </FormControl>
+          <Button color="primary" variant="contained" fullWidth type="submit">
+            Login
+          </Button>
+          <Text>
+            Don`t have an account
+            <Span>
+              <NavLink to="/register">Register</NavLink>
+            </Span>
+          </Text>
+        </Form>
+      </Box>
+    </>
   );
 };
