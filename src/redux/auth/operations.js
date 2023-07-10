@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {notify} from '../../helpers/notification';
+import { notify } from '../../helpers/notification';
 
 axios.defaults.baseURL = 'https://contacts-api-servise.onrender.com';
 
@@ -22,7 +22,6 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      console.log(error.message);
       if (error.message === 'Request failed with status code 409') {
         notify(
           'warning',
@@ -42,8 +41,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      console.log(error.message);
-         if (error.message === 'Request failed with status code 401') {
+      if (error.message === 'Request failed with status code 401') {
         notify(
           'warning',
           `User "${values.email}" is not found, please register and try again`
@@ -53,7 +51,6 @@ export const logIn = createAsyncThunk(
     }
   }
 );
-
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
